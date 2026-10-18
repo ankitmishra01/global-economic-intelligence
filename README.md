@@ -120,7 +120,7 @@ Missing predictors are mean imputed inside each rolling training window. Outcome
 
 ### Model selection rule
 
-Rolling origin predictions are collected for all eligible country years. Mean absolute error is calculated for each candidate and the naive baseline. A candidate is shipped only if it beats naive out of sample. Otherwise:
+Rolling origin predictions are collected for all eligible country years. The backtest origins are then cut in half. The candidate with the lowest mean absolute error on the earlier half is chosen, and the error that gets published is its error on the later half, which the choice never saw. Choosing and scoring on one sample would inflate the published skill. A candidate is shipped only if it beats naive on both halves. Otherwise:
 
 - `noSkill` is `true`
 - `status` is `no skill, showing baseline`
@@ -133,12 +133,12 @@ This is executable behaviour, asserted in `tests/projections.test.cjs`.
 
 The backtest uses an expanding window:
 
-1. Train only on observations before an origin year.
+1. Train only on samples whose own target year was already observed at the origin, that is `sample origin + horizon <= origin`. Training on every earlier origin instead would hand the model outcomes from after the forecast was supposedly made.
 2. Predict the target horizon for every eligible country.
 3. Advance the origin year and repeat.
-4. Pool the resulting out of sample errors.
+4. Pool the resulting out of sample errors, then split them into a selection half and a held out half.
 
-The artifact reports MAE, RMSE, naive MAE and RMSE, percentage skill, empirical 80% interval coverage, and error results excluding the 2020 and 2022 shocks.
+The artifact reports MAE, RMSE, naive MAE and RMSE, percentage skill, empirical 80% interval coverage, and error results excluding the 2020 and 2022 shocks, all measured on the held out origins. `coverage80` is scored against a band fitted only on the selection origins, so it is evidence rather than an arithmetic identity, and it is well below 80% at the longer horizons. `basis` and `coverageBasis` on every backtest row say in words which records produced each figure.
 
 ### Uncertainty ranges
 

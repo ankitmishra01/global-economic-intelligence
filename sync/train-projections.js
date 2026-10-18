@@ -19,6 +19,9 @@ const HORIZONS = [1, 2, 3, 4, 5];
 const SHOCK_YEARS = new Set([2020, 2022]);
 const RIDGE_LAMBDA = 4;
 const MIN_TRAIN = 70;
+// Smallest backtest that can be cut into a selection half and a held out half.
+const MIN_SPLIT_ORIGINS = 6;
+const MIN_SPLIT_RECORDS = 12;
 const INTEREST_RATE_ASSUMPTION = 3;
 
 const round = (v, d = 2) => +v.toFixed(d);
@@ -128,7 +131,7 @@ function evaluate(panel, termSpread, countries, key, horizon, opts) {
     if (train.length < Math.min(MIN_TRAIN, Math.max(12, countries.length * 5)) || !test.length) continue;
     const ridge = fitRidge(train);
     for (const s of test) records.push({
-      year: s.origin + horizon, actual: s.y,
+      origin: s.origin, year: s.origin + horizon, actual: s.y,
       naive: baseline(panel, countries, s.iso3, key, s.origin, horizon, 'naive'),
       damped: baseline(panel, countries, s.iso3, key, s.origin, horizon, 'damped'),
       meanReversion: baseline(panel, countries, s.iso3, key, s.origin, horizon, 'meanReversion'),
@@ -136,21 +139,45 @@ function evaluate(panel, termSpread, countries, key, horizon, opts) {
     });
   }
   if (!records.length) throw new Error(`Insufficient backtest data for ${key} h${horizon}`);
-  const actual = records.map(r => r.actual);
   const candidates = ['naive', 'damped', 'meanReversion', 'ridge'];
-  const scores = Object.fromEntries(candidates.map(k => [k, metric(records.map(r => r[k]), actual)]));
-  const best = candidates.slice(1).sort((a, b) => scores[a].mae - scores[b].mae)[0];
-  const noSkill = scores[best].mae >= scores.naive.mae;
+  const scoreSet = set => Object.fromEntries(candidates.map(k => [k, metric(set.map(r => r[k]), set.map(r => r.actual))]));
+  // Picking the winner and quoting its error on one sample inflates skill. Choose the
+  // method on the earlier origins, then quote only the later origins it never saw.
+  const backtestOrigins = [...new Set(records.map(r => r.origin))].sort((a, b) => a - b);
+  const cut = backtestOrigins[Math.floor(backtestOrigins.length / 2)];
+  const early = records.filter(r => r.origin < cut), late = records.filter(r => r.origin >= cut);
+  const split = backtestOrigins.length >= MIN_SPLIT_ORIGINS && early.length >= MIN_SPLIT_RECORDS && late.length >= MIN_SPLIT_RECORDS;
+  const selectionSet = split ? early : records, reportSet = split ? late : records;
+  const selectionScores = scoreSet(selectionSet), scores = scoreSet(reportSet);
+  const best = candidates.slice(1).sort((a, b) => selectionScores[a].mae - selectionScores[b].mae)[0];
+  const lostOnSelection = selectionScores[best].mae >= selectionScores.naive.mae;
+  // Keeping a method that lost on the held out origins would advertise skill it does not
+  // have, so it falls back to the baseline. This can only lower a quoted skill, never raise one.
+  const lostOnHeldOut = scores[best].mae >= scores.naive.mae;
+  const noSkill = lostOnSelection || lostOnHeldOut;
   const selected = noSkill ? 'naive' : best;
+  const skillNote = !noSkill ? `${METHOD_NAMES[best]} beat naive on both the selection and the held out origins`
+    : lostOnSelection ? 'no candidate beat naive on the selection origins'
+    : `${METHOD_NAMES[best]} beat naive on the selection origins but lost to it on the held out origins`;
   const residuals = records.map(r => r.actual - r[selected]);
   const widths = { p10: Math.abs(quantile(residuals, 0.1)), p25: Math.abs(quantile(residuals, 0.25)), p75: Math.abs(quantile(residuals, 0.75)), p90: Math.abs(quantile(residuals, 0.9)) };
-  const lo80 = quantile(residuals, 0.1), hi80 = quantile(residuals, 0.9);
-  const coverage = mean(records.map(r => r.actual >= r[selected] + lo80 && r.actual <= r[selected] + hi80 ? 1 : 0));
-  const clean = records.filter(r => !SHOCK_YEARS.has(r.year));
+  // A band scored on the rows its own quantiles were fitted on reads 80% by construction.
+  // Fit the band on the selection origins and score it on the held out ones.
+  const bandResiduals = selectionSet.map(r => r.actual - r[selected]);
+  const lo80 = quantile(bandResiduals, 0.1), hi80 = quantile(bandResiduals, 0.9);
+  const coverage = mean(reportSet.map(r => r.actual >= r[selected] + lo80 && r.actual <= r[selected] + hi80 ? 1 : 0));
+  const clean = reportSet.filter(r => !SHOCK_YEARS.has(r.year));
   const cleanActual = clean.map(r => r.actual);
   const cleanSelected = metric(clean.map(r => r[selected]), cleanActual);
   const cleanNaive = metric(clean.map(r => r.naive), cleanActual);
-  return { selected, noSkill, records, residuals, widths, coverage, scores, cleanSelected, cleanNaive };
+  const last = backtestOrigins[backtestOrigins.length - 1];
+  const basis = split
+    ? `method chosen on origins ${backtestOrigins[0]} to ${cut - 1}, error quoted on held out origins ${cut} to ${last}, which also decide whether the method is kept at all`
+    : `only ${backtestOrigins.length} backtest origins, too few to split, so the method is chosen and the error quoted on the same ${records.length} records`;
+  const coverageBasis = split
+    ? 'held out origins, with the 80% band fitted on the earlier selection origins only'
+    : 'in sample fit of the band to the records its own quantiles came from, not out of sample coverage';
+  return { selected, noSkill, skillNote, split, basis, coverageBasis, records, reportSet, residuals, widths, coverage, scores, selectionScores, cleanSelected, cleanNaive };
 }
 
 const METHOD_NAMES = { naive: 'naive last value baseline', damped: 'damped trend baseline', meanReversion: 'mean reversion to a long run anchor', ridge: 'pooled ridge regression with direct multi horizon fits' };
@@ -200,7 +227,8 @@ function trainProjectionEngine(panel, options = {}) {
       fits[key][horizon] = ev;
       const selectedMetric = ev.scores[ev.selected], naiveMetric = ev.scores.naive;
       backtest.push({ indicator: key, horizon, shippedMethod: METHOD_NAMES[ev.selected], status: ev.noSkill ? 'no skill, showing baseline' : 'out of sample skill', noSkill: ev.noSkill,
-        samples: ev.records.length, mae: round(selectedMetric.mae), rmse: round(selectedMetric.rmse), naiveMae: round(naiveMetric.mae), naiveRmse: round(naiveMetric.rmse),
+        samples: ev.reportSet.length, backtestRecords: ev.records.length, basis: ev.basis, coverageBasis: ev.coverageBasis, skillNote: ev.skillNote,
+        mae: round(selectedMetric.mae), rmse: round(selectedMetric.rmse), naiveMae: round(naiveMetric.mae), naiveRmse: round(naiveMetric.rmse),
         skillPct: round(100 * (1 - selectedMetric.mae / naiveMetric.mae), 1), coverage80: round(ev.coverage * 100, 1),
         excludingShocks: { mae: round(ev.cleanSelected.mae), rmse: round(ev.cleanSelected.rmse), naiveMae: round(ev.cleanNaive.mae), naiveRmse: round(ev.cleanNaive.rmse), skillPct: round(100 * (1 - ev.cleanSelected.mae / ev.cleanNaive.mae), 1) } });
       if (key === 'DEBT_GDP') continue;
@@ -243,9 +271,9 @@ function trainProjectionEngine(panel, options = {}) {
   return { schemaVersion: 1, generatedDate, dataVintage, projectionOriginYear: origin, coverage: '19 G20 countries; European Union excluded from modelling and aggregation', indicators: INDICATORS, horizons: HORIZONS,
     methods: Object.fromEntries(INDICATORS.map(key => [key, Object.fromEntries(HORIZONS.map(h => [h, key === 'DEBT_GDP' ? 'debt dynamics identity' : backtest.find(r => r.indicator === key && r.horizon === h).shippedMethod]))])),
     features: ['own level', 'own one year lag', 'own momentum', 'other five headline indicators', 'yield curve term spread where available'], missingData: 'Missing predictors are mean imputed within each rolling training window. Outcomes are never imputed.',
-    trainingWindow: `${minTrainYear} to ${origin}`, uncertainty: 'Empirical out of sample residual quantiles by indicator and horizon. p25 to p75 is the 50% band; p10 to p90 is the 80% band.',
+    trainingWindow: `${minTrainYear} to ${origin}`, uncertainty: 'Empirical out of sample residual quantiles by indicator and horizon. p25 to p75 is the 50% band; p10 to p90 is the 80% band. Quoted coverage is measured on held out origins against a band fitted only on the earlier origins, so it can and does differ from 80%.',
     projections, backtest, scenarios: scenarioCoefficients,
-    limits: ['Only 19 countries and roughly 25 annual observations per country', 'Structural breaks can make historical relationships fail', 'No forward looking policy information is used', 'Projections are not advice', 'Scenarios are illustrative assumptions, not forecasts'],
+    limits: ['Only 19 countries and roughly 25 annual observations per country', 'Structural breaks can make historical relationships fail', 'No forward looking policy information is used', 'Methods are chosen on the early backtest origins and scored on the later ones, but a method is kept only if it also wins on those later origins, so a quoted skill still carries the mild optimism of that last check', 'Held out origins are dominated by 2020 to 2025, so quoted errors are larger and band coverage lower than a calmer period would give', 'Projections are not advice', 'Scenarios are illustrative assumptions, not forecasts'],
   };
 }
 
@@ -278,7 +306,7 @@ async function main() {
   const oecd = JSON.parse(fs.readFileSync(path.join(__dirname, '../public/legacy/oecd-aggregate.json'), 'utf8'));
   const data = trainProjectionEngine(panel, { dataVintage: vintage, termSpread: loadTermSpread(), oecdSeries: oecd.series });
   validateOutput(data);
-  console.log('\nIndicator       H  Model MAE  Naive MAE  Skill    80% coverage  Method');
+  console.log('\nIndicator       H  Model MAE  Naive MAE  Skill    Held out 80%  Method');
   for (const r of data.backtest) console.log(`${r.indicator.padEnd(15)} ${String(r.horizon).padStart(1)}  ${r.mae.toFixed(2).padStart(9)}  ${r.naiveMae.toFixed(2).padStart(9)}  ${(r.skillPct.toFixed(1) + '%').padStart(7)}  ${(r.coverage80.toFixed(1) + '%').padStart(12)}  ${r.status}`);
   const out = path.join(__dirname, '../public/legacy/projections.json');
   fs.writeFileSync(out, JSON.stringify(data) + '\n');
