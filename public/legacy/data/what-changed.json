@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-17T03:47:44.101Z",
+ "generatedAt": "2026-10-19T10:53:59.872Z",
  "asOf": "2026-10-16",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-17T03:03:45.336Z"
+  "realtime": "2026-10-17T03:27:43.000Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -25,7 +25,7 @@
    "direction": "weaker",
    "asOf": "2026-10-16",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 4.362,
    "g20": true
   },
