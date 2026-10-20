@@ -1,50 +1,33 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T10:09:30.967Z",
- "asOf": "2026-10-19",
+ "generatedAt": "2026-10-20T15:40:50.077Z",
+ "asOf": "2026-10-20",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-20T01:54:26.565Z"
+  "realtime": "2026-10-20T10:09:28.962Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
-  "market": 1,
   "fx": 1,
-  "policy": 13
+  "policy": 13,
+  "market": 1
  },
  "items": [
-  {
-   "id": "market:VIX:2026-10-16",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +21.4% to 20.0",
-   "value": 19.99,
-   "previous": 16.46,
-   "change": 21.45,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-16",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 5.363,
-   "g20": true
-  },
   {
    "id": "fx:MXN:30d:weaker",
    "kind": "fx",
    "iso3": "MEX",
    "currency": "MXN",
-   "title": "MXN weakened 7.5% against the US dollar over 30 days",
-   "value": 18.4838,
-   "change": 7.52,
+   "title": "MXN weakened 7.7% against the US dollar over 30 days",
+   "value": 18.5215,
+   "change": 7.74,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-10-19",
+   "asOf": "2026-10-20",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 4.512,
+   "materiality": 4.644,
    "g20": true
   },
   {
@@ -165,6 +148,24 @@
    "newSinceLastRefresh": false,
    "materiality": 3.6,
    "g20": true
+  },
+  {
+   "id": "market:VIX:2026-10-16",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +21.4% to 20.0",
+   "value": 19.99,
+   "previous": 16.46,
+   "change": 21.45,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-10-16",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 3.218,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "policy:NOR:4.5",
