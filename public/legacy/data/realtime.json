@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T01:54:26.565Z",
+ "generatedAt": "2026-10-20T10:09:28.962Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
   "US10Y": {
@@ -33,21 +33,6 @@
    "releaseCadence": "daily",
    "freshness": "stale"
   },
-  "USD_BROAD": {
-   "key": "USD_BROAD",
-   "label": "Broad dollar",
-   "unit": "index",
-   "value": 121.405,
-   "date": "2026-10-16",
-   "previous": 121.569,
-   "previousDate": "2026-10-15",
-   "change": -0.165,
-   "changePct": -0.14,
-   "source": "Federal Reserve via FRED (DTWEXBGS)",
-   "frequency": "daily",
-   "releaseCadence": "weekly",
-   "freshness": "current"
-  },
   "WTI": {
    "key": "WTI",
    "label": "WTI",
@@ -77,6 +62,21 @@
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
+  },
+  "USD_BROAD": {
+   "key": "USD_BROAD",
+   "label": "Broad dollar",
+   "unit": "index",
+   "value": 121.405,
+   "date": "2026-10-16",
+   "previous": 121.569,
+   "previousDate": "2026-10-15",
+   "change": -0.165,
+   "changePct": -0.14,
+   "source": "Federal Reserve via FRED (DTWEXBGS)",
+   "frequency": "daily",
+   "releaseCadence": "weekly",
+   "freshness": "current"
   }
  },
  "fx": {

@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T01:54:30.222Z",
+ "generatedAt": "2026-10-20T10:09:30.967Z",
  "asOf": "2026-10-19",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-19T17:33:47.412Z"
+  "realtime": "2026-10-20T01:54:26.565Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
