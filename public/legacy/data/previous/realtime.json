@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T20:40:40.455Z",
+ "generatedAt": "2026-10-21T01:41:21.171Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
   "US10Y": {
@@ -14,6 +14,21 @@
    "change": 0.06,
    "changePct": 1.18,
    "source": "U.S. Treasury via FRED (DGS10)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
+  },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 18.44,
+   "date": "2026-10-19",
+   "previous": 19.99,
+   "previousDate": "2026-10-16",
+   "change": -1.55,
+   "changePct": -7.75,
+   "source": "Cboe via FRED (VIXCLS)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
@@ -46,21 +61,6 @@
    "source": "Federal Reserve via FRED (DTWEXBGS)",
    "frequency": "daily",
    "releaseCadence": "weekly",
-   "freshness": "current"
-  },
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 18.44,
-   "date": "2026-10-19",
-   "previous": 19.99,
-   "previousDate": "2026-10-16",
-   "change": -1.55,
-   "changePct": -7.75,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
    "freshness": "current"
   },
   "WTI": {
