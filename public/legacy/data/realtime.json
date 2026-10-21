@@ -1,8 +1,24 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-21T15:59:23.485Z",
+ "generatedAt": "2026-10-21T20:41:28.597Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 5.15,
+   "date": "2026-10-19",
+   "previous": 5.09,
+   "previousDate": "2026-10-16",
+   "change": 0.06,
+   "changePct": 1.18,
+   "source": "U.S. Treasury via FRED (DGS10)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current",
+   "carriedOver": true
+  },
   "WTI": {
    "key": "WTI",
    "label": "WTI",
@@ -32,22 +48,6 @@
    "source": "Federal Reserve via FRED (DTWEXBGS)",
    "frequency": "daily",
    "releaseCadence": "weekly",
-   "freshness": "current",
-   "carriedOver": true
-  },
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 5.15,
-   "date": "2026-10-19",
-   "previous": 5.09,
-   "previousDate": "2026-10-16",
-   "change": 0.06,
-   "changePct": 1.18,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
    "freshness": "current",
    "carriedOver": true
   },
@@ -1069,9 +1069,9 @@
   }
  },
  "errors": [
+  "FRED DGS10: no value in range",
   "FRED DCOILWTICO: no value in range",
   "FRED DTWEXBGS: no value in range",
-  "FRED DGS10: no value in range",
   "FRED VIXCLS: no value in range",
   "FRED DCOILBRENTEU: no value in range"
  ]

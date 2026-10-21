@@ -1,23 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-21T10:16:55.016Z",
+ "generatedAt": "2026-10-21T15:59:23.485Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 18.44,
-   "date": "2026-10-19",
-   "previous": 19.99,
-   "previousDate": "2026-10-16",
-   "change": -1.55,
-   "changePct": -7.75,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "WTI": {
    "key": "WTI",
    "label": "WTI",
@@ -31,37 +16,8 @@
    "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "stale"
-  },
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 5.15,
-   "date": "2026-10-19",
-   "previous": 5.09,
-   "previousDate": "2026-10-16",
-   "change": 0.06,
-   "changePct": 1.18,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
-   "unit": "USD/bbl",
-   "value": 126.55,
-   "date": "2026-10-14",
-   "previous": 125.78,
-   "previousDate": "2026-10-13",
-   "change": 0.77,
-   "changePct": 0.61,
-   "source": "EIA via FRED (DCOILBRENTEU)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "stale"
+   "freshness": "stale",
+   "carriedOver": true
   },
   "USD_BROAD": {
    "key": "USD_BROAD",
@@ -76,162 +32,211 @@
    "source": "Federal Reserve via FRED (DTWEXBGS)",
    "frequency": "daily",
    "releaseCadence": "weekly",
-   "freshness": "current"
+   "freshness": "current",
+   "carriedOver": true
+  },
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 5.15,
+   "date": "2026-10-19",
+   "previous": 5.09,
+   "previousDate": "2026-10-16",
+   "change": 0.06,
+   "changePct": 1.18,
+   "source": "U.S. Treasury via FRED (DGS10)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current",
+   "carriedOver": true
+  },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 18.44,
+   "date": "2026-10-19",
+   "previous": 19.99,
+   "previousDate": "2026-10-16",
+   "change": -1.55,
+   "changePct": -7.75,
+   "source": "Cboe via FRED (VIXCLS)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current",
+   "carriedOver": true
+  },
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
+   "unit": "USD/bbl",
+   "value": 126.55,
+   "date": "2026-10-14",
+   "previous": 125.78,
+   "previousDate": "2026-10-13",
+   "change": 0.77,
+   "changePct": 0.61,
+   "source": "EIA via FRED (DCOILBRENTEU)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "stale",
+   "carriedOver": true
   }
  },
  "fx": {
   "base": "USD",
-  "date": "2026-10-20",
-  "previousDate": "2026-10-19",
+  "date": "2026-10-21",
+  "previousDate": "2026-10-20",
   "monthAgoDate": "2026-09-21",
   "source": "European Central Bank euro foreign exchange reference rates",
   "frequency": "daily",
   "freshness": "current",
   "values": {
    "JPY": {
-    "perUsd": 158.13,
-    "change1dPct": -0.07,
-    "change30dPct": 0.55
+    "perUsd": 157.88,
+    "change1dPct": -0.16,
+    "change30dPct": 0.39
    },
    "CZK": {
-    "perUsd": 21.6933,
-    "change1dPct": 0.03,
-    "change30dPct": 2.36
+    "perUsd": 21.5969,
+    "change1dPct": -0.44,
+    "change30dPct": 1.9
    },
    "DKK": {
-    "perUsd": 6.6648,
-    "change1dPct": 0.09,
-    "change30dPct": 2.44
+    "perUsd": 6.6536,
+    "change1dPct": -0.17,
+    "change30dPct": 2.27
    },
    "GBP": {
-    "perUsd": 0.7492,
-    "change1dPct": -0.12,
-    "change30dPct": 0.36
+    "perUsd": 0.7462,
+    "change1dPct": -0.41,
+    "change30dPct": -0.05
    },
    "HUF": {
-    "perUsd": 325.17,
-    "change1dPct": 0.44,
-    "change30dPct": 3.1
-   },
-   "PLN": {
-    "perUsd": 3.9026,
-    "change1dPct": 0.22,
+    "perUsd": 324.91,
+    "change1dPct": -0.08,
     "change30dPct": 3.01
    },
+   "PLN": {
+    "perUsd": 3.8842,
+    "change1dPct": -0.47,
+    "change30dPct": 2.53
+   },
    "RON": {
-    "perUsd": 4.7533,
-    "change1dPct": 0.17,
-    "change30dPct": 3.74
+    "perUsd": 4.7503,
+    "change1dPct": -0.06,
+    "change30dPct": 3.67
    },
    "SEK": {
-    "perUsd": 9.918,
-    "change1dPct": 0.26,
-    "change30dPct": 1.07
+    "perUsd": 9.8785,
+    "change1dPct": -0.4,
+    "change30dPct": 0.67
    },
    "CHF": {
-    "perUsd": 0.8236,
-    "change1dPct": -0.17,
-    "change30dPct": 0.27
+    "perUsd": 0.8239,
+    "change1dPct": 0.04,
+    "change30dPct": 0.31
    },
    "ISK": {
-    "perUsd": 121.44,
-    "change1dPct": -0.06,
-    "change30dPct": 0.53
+    "perUsd": 121.24,
+    "change1dPct": -0.17,
+    "change30dPct": 0.36
    },
    "NOK": {
-    "perUsd": 9.3843,
-    "change1dPct": -0.2,
-    "change30dPct": -0.28
+    "perUsd": 9.3573,
+    "change1dPct": -0.29,
+    "change30dPct": -0.57
    },
    "TRY": {
-    "perUsd": 49.5773,
+    "perUsd": 49.6024,
     "change1dPct": 0.05,
-    "change30dPct": 1.59
+    "change30dPct": 1.65
    },
    "AUD": {
-    "perUsd": 1.4317,
-    "change1dPct": 0.01,
-    "change30dPct": 2.18
+    "perUsd": 1.4217,
+    "change1dPct": -0.7,
+    "change30dPct": 1.47
    },
    "BRL": {
-    "perUsd": 5.0235,
-    "change1dPct": -0.43,
+    "perUsd": 5.0233,
+    "change1dPct": 0,
     "change30dPct": -2.04
    },
    "CAD": {
-    "perUsd": 1.4051,
-    "change1dPct": -0.16,
-    "change30dPct": 0.33
+    "perUsd": 1.4046,
+    "change1dPct": -0.04,
+    "change30dPct": 0.3
    },
    "CNY": {
-    "perUsd": 6.678,
-    "change1dPct": -0.04,
-    "change30dPct": -0.26
+    "perUsd": 6.6761,
+    "change1dPct": -0.03,
+    "change30dPct": -0.29
    },
    "HKD": {
-    "perUsd": 7.8487,
-    "change1dPct": 0.01,
-    "change30dPct": 0.04
+    "perUsd": 7.8472,
+    "change1dPct": -0.02,
+    "change30dPct": 0.02
    },
    "IDR": {
-    "perUsd": 17985.35,
-    "change1dPct": -0.32,
-    "change30dPct": 0.65
+    "perUsd": 18042.7,
+    "change1dPct": 0.32,
+    "change30dPct": 0.97
    },
    "ILS": {
-    "perUsd": 3.1077,
-    "change1dPct": -0.02,
-    "change30dPct": 3.2
+    "perUsd": 3.0912,
+    "change1dPct": -0.53,
+    "change30dPct": 2.65
    },
    "INR": {
-    "perUsd": 94.9255,
-    "change1dPct": 0,
-    "change30dPct": -0.93
+    "perUsd": 94.469,
+    "change1dPct": -0.48,
+    "change30dPct": -1.41
    },
    "KRW": {
-    "perUsd": 1327.84,
-    "change1dPct": -0.12,
-    "change30dPct": -3.23
+    "perUsd": 1325.57,
+    "change1dPct": -0.17,
+    "change30dPct": -3.4
    },
    "MXN": {
-    "perUsd": 18.5215,
-    "change1dPct": 0.2,
-    "change30dPct": 7.74
+    "perUsd": 18.4825,
+    "change1dPct": -0.21,
+    "change30dPct": 7.51
    },
    "MYR": {
-    "perUsd": 4.0827,
-    "change1dPct": 0.01,
-    "change30dPct": 0.13
+    "perUsd": 4.0807,
+    "change1dPct": -0.05,
+    "change30dPct": 0.08
    },
    "NZD": {
-    "perUsd": 1.7609,
-    "change1dPct": -0.13,
-    "change30dPct": 0.98
+    "perUsd": 1.7567,
+    "change1dPct": -0.23,
+    "change30dPct": 0.75
    },
    "PHP": {
-    "perUsd": 63.1333,
-    "change1dPct": 0.22,
-    "change30dPct": 0.54
+    "perUsd": 63.3087,
+    "change1dPct": 0.28,
+    "change30dPct": 0.82
    },
    "SGD": {
-    "perUsd": 1.2785,
-    "change1dPct": -0.04,
-    "change30dPct": 0.29
+    "perUsd": 1.2772,
+    "change1dPct": -0.1,
+    "change30dPct": 0.19
    },
    "THB": {
-    "perUsd": 33.6496,
-    "change1dPct": 0.28,
-    "change30dPct": 1.25
+    "perUsd": 33.5749,
+    "change1dPct": -0.22,
+    "change30dPct": 1.02
    },
    "ZAR": {
-    "perUsd": 16.4752,
-    "change1dPct": 0.25,
-    "change30dPct": 1.33
+    "perUsd": 16.3726,
+    "change1dPct": -0.62,
+    "change30dPct": 0.7
    },
    "EUR": {
-    "perUsd": 0.8917,
-    "change1dPct": 0.09,
-    "change30dPct": 2.45
+    "perUsd": 0.8902,
+    "change1dPct": -0.17,
+    "change30dPct": 2.28
    }
   },
   "currencyByIso3": {
@@ -304,7 +309,7 @@
      "change": 0.25
     },
     "area": "AU",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "CAN": {
@@ -590,7 +595,7 @@
      "change": 0.25
     },
     "area": "KR",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "KWT": {
@@ -681,7 +686,7 @@
      "change": 0.25
     },
     "area": "NO",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "NZL": {
@@ -811,7 +816,7 @@
      "change": -0.25
     },
     "area": "TH",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "TUR": {
@@ -1063,5 +1068,11 @@
    }
   }
  },
- "errors": []
+ "errors": [
+  "FRED DCOILWTICO: no value in range",
+  "FRED DTWEXBGS: no value in range",
+  "FRED DGS10: no value in range",
+  "FRED VIXCLS: no value in range",
+  "FRED DCOILBRENTEU: no value in range"
+ ]
 }
