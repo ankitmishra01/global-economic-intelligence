@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-21T20:41:30.783Z",
+ "generatedAt": "2026-10-22T01:36:34.520Z",
  "asOf": "2026-10-21",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-21T15:59:23.485Z"
+  "realtime": "2026-10-21T20:41:28.597Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -265,7 +265,7 @@
    "asOf": "2026-10-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.25,
+   "materiality": 0.15,
    "g20": true,
    "carried": true
   }
