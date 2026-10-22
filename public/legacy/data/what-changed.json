@@ -1,50 +1,33 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-22T10:18:05.445Z",
- "asOf": "2026-10-21",
+ "generatedAt": "2026-10-22T15:55:17.886Z",
+ "asOf": "2026-10-22",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-22T01:36:32.130Z"
+  "realtime": "2026-10-22T10:18:03.557Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
-  "policy": 14,
   "fx": 1,
+  "policy": 14,
   "market": 2
  },
  "items": [
-  {
-   "id": "policy:IND:5.5",
-   "kind": "policy",
-   "iso3": "IND",
-   "title": "The Reserve Bank of India raised its policy rate by 25bp to 5.5%",
-   "value": 5.5,
-   "previous": 5.25,
-   "change": 0.25,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-19",
-   "source": "BIS central bank policy rates (WS_CBPOL)",
-   "since": null,
-   "newSinceLastRefresh": true,
-   "materiality": 5.4,
-   "g20": true
-  },
   {
    "id": "fx:MXN:30d:weaker",
    "kind": "fx",
    "iso3": "MEX",
    "currency": "MXN",
-   "title": "MXN weakened 7.5% against the US dollar over 30 days",
-   "value": 18.4825,
-   "change": 7.51,
+   "title": "MXN weakened 8.8% against the US dollar over 30 days",
+   "value": 18.7608,
+   "change": 8.76,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-10-21",
+   "asOf": "2026-10-22",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 4.506,
+   "materiality": 5.256,
    "g20": true
   },
   {
@@ -116,6 +99,23 @@
    "g20": true
   },
   {
+   "id": "policy:IND:5.5",
+   "kind": "policy",
+   "iso3": "IND",
+   "title": "The Reserve Bank of India raised its policy rate by 25bp to 5.5%",
+   "value": 5.5,
+   "previous": 5.25,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-10-19",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": "2026-09",
+   "newSinceLastRefresh": false,
+   "materiality": 3.6,
+   "g20": true
+  },
+  {
    "id": "policy:ZAF:7.25",
    "kind": "policy",
    "iso3": "ZAF",
@@ -179,7 +179,7 @@
    "direction": "down",
    "asOf": "2026-10-20",
    "source": "EIA via FRED (DCOILBRENTEU)",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 2.525,
    "g20": true
   },
@@ -299,7 +299,7 @@
    "asOf": "2026-10-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.09,
+   "materiality": 0.054,
    "g20": true,
    "carried": true
   }
