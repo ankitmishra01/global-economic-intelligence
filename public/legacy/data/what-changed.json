@@ -1,16 +1,16 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-23T10:11:30.147Z",
- "asOf": "2026-10-22",
+ "generatedAt": "2026-10-23T15:46:48.188Z",
+ "asOf": "2026-10-23",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-23T01:37:18.316Z"
+  "realtime": "2026-10-23T10:11:27.958Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "fx": 1,
   "policy": 14,
-  "market": 2
+  "market": 3
  },
  "items": [
   {
@@ -18,16 +18,16 @@
    "kind": "fx",
    "iso3": "MEX",
    "currency": "MXN",
-   "title": "MXN weakened 8.8% against the US dollar over 30 days",
-   "value": 18.7608,
-   "change": 8.76,
+   "title": "MXN weakened 7.7% against the US dollar over 30 days",
+   "value": 18.7819,
+   "change": 7.7,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-10-22",
+   "asOf": "2026-10-23",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 5.256,
+   "materiality": 4.62,
    "g20": true
   },
   {
@@ -167,6 +167,23 @@
    "g20": true
   },
   {
+   "id": "market:VIX:2026-10-22",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +14.1% to 19.0",
+   "value": 19.03,
+   "previous": 16.68,
+   "change": 14.09,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-10-22",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": true,
+   "materiality": 3.523,
+   "g20": true
+  },
+  {
    "id": "market:BRENT:2026-10-20",
    "kind": "market",
    "iso3": null,
@@ -299,7 +316,7 @@
    "asOf": "2026-10-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.011,
+   "materiality": 0.007,
    "g20": true,
    "carried": true
   }

@@ -1,23 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-23T01:37:18.316Z",
+ "generatedAt": "2026-10-23T10:11:27.958Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 5.13,
-   "date": "2026-10-21",
-   "previous": 5.12,
-   "previousDate": "2026-10-20",
-   "change": 0.01,
-   "changePct": 0.2,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "WTI": {
    "key": "WTI",
    "label": "WTI",
@@ -33,20 +18,20 @@
    "releaseCadence": "daily",
    "freshness": "delayed"
   },
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 16.68,
-   "date": "2026-10-21",
-   "previous": 17.31,
-   "previousDate": "2026-10-20",
-   "change": -0.63,
-   "changePct": -3.64,
-   "source": "Cboe via FRED (VIXCLS)",
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
+   "unit": "USD/bbl",
+   "value": 115.22,
+   "date": "2026-10-20",
+   "previous": 118.82,
+   "previousDate": "2026-10-19",
+   "change": -3.6,
+   "changePct": -3.03,
+   "source": "EIA via FRED (DCOILBRENTEU)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "current"
+   "freshness": "delayed"
   },
   "USD_BROAD": {
    "key": "USD_BROAD",
@@ -63,20 +48,35 @@
    "releaseCadence": "weekly",
    "freshness": "current"
   },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
-   "unit": "USD/bbl",
-   "value": 115.22,
-   "date": "2026-10-20",
-   "previous": 118.82,
-   "previousDate": "2026-10-19",
-   "change": -3.6,
-   "changePct": -3.03,
-   "source": "EIA via FRED (DCOILBRENTEU)",
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 16.68,
+   "date": "2026-10-21",
+   "previous": 17.31,
+   "previousDate": "2026-10-20",
+   "change": -0.63,
+   "changePct": -3.64,
+   "source": "Cboe via FRED (VIXCLS)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "delayed"
+   "freshness": "current"
+  },
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 5.13,
+   "date": "2026-10-21",
+   "previous": 5.12,
+   "previousDate": "2026-10-20",
+   "change": 0.01,
+   "changePct": 0.2,
+   "source": "U.S. Treasury via FRED (DGS10)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
   }
  },
  "fx": {
