@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-22T20:35:50.384Z",
+ "generatedAt": "2026-10-23T01:37:18.316Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
   "US10Y": {
@@ -18,17 +18,32 @@
    "releaseCadence": "daily",
    "freshness": "current"
   },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
    "unit": "USD/bbl",
-   "value": 115.22,
+   "value": 107.89,
    "date": "2026-10-20",
-   "previous": 118.82,
+   "previous": 110.01,
    "previousDate": "2026-10-19",
-   "change": -3.6,
-   "changePct": -3.03,
-   "source": "EIA via FRED (DCOILBRENTEU)",
+   "change": -2.12,
+   "changePct": -1.93,
+   "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "delayed"
+  },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 16.68,
+   "date": "2026-10-21",
+   "previous": 17.31,
+   "previousDate": "2026-10-20",
+   "change": -0.63,
+   "changePct": -3.64,
+   "source": "Cboe via FRED (VIXCLS)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
@@ -48,35 +63,20 @@
    "releaseCadence": "weekly",
    "freshness": "current"
   },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
    "unit": "USD/bbl",
-   "value": 107.89,
+   "value": 115.22,
    "date": "2026-10-20",
-   "previous": 110.01,
+   "previous": 118.82,
    "previousDate": "2026-10-19",
-   "change": -2.12,
-   "changePct": -1.93,
-   "source": "EIA via FRED (DCOILWTICO)",
+   "change": -3.6,
+   "changePct": -3.03,
+   "source": "EIA via FRED (DCOILBRENTEU)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 16.68,
-   "date": "2026-10-21",
-   "previous": 17.31,
-   "previousDate": "2026-10-20",
-   "change": -0.63,
-   "changePct": -3.64,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
+   "freshness": "delayed"
   }
  },
  "fx": {
@@ -759,7 +759,7 @@
      "change": -0.25
     },
     "area": "RS",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "RUS": {
