@@ -57,3 +57,16 @@ test('live country tiers derive from validated collection membership', () => {
   assert.match(source, /collection_members\(collection_slug\)/);
   assert.match(source, /isG20 \? 1 : 3/);
 });
+
+test('legacy overview progressively discloses dense decision evidence', () => {
+  const overview = read('public/legacy/components/overview.js');
+  const changed = read('public/legacy/components/whatchanged.js');
+  const index = read('public/legacy/index.html');
+  assert.match(overview, /overviewRankingLimit/);
+  assert.match(overview, /overviewToggleRankings/);
+  assert.match(overview, /aria-expanded="false"/);
+  assert.match(overview, /<details class="overview-disclosure/);
+  assert.match(overview, /overview-risk-summary/);
+  assert.match(changed, /const TOP_N = 5/);
+  assert.match(index, /id="mobile-tools-menu"/);
+});

@@ -74,8 +74,6 @@ function renderOverview() {
   const infVals      = infRank.filter(nonEU).map(c => c.value);
   const medianInf    = median(infVals);
   const expandingN   = growthVals.filter(v => v > 0).length;
-  const topInf       = infRank.filter(nonEU)[0];
-  const topDebt      = debtRank.filter(nonEU)[0];
   const debtFlags    = debtRank.filter(c => nonEU(c) && c.value > 100);
 
   // Build ranked table: by GDP descending (non-EU)
@@ -111,7 +109,7 @@ function renderOverview() {
       </div>
     </div>
 
-    <div class="hero__stats">
+    <div class="hero__stats hero__stats--overview">
       <div class="hero__stat">
         <div class="hero__stat-lbl">Aggregate GDP</div>
         <div class="hero__stat-val">${(totalGDP / 1e12).toFixed(1)}<span class="unit">USD tn</span></div>
@@ -134,16 +132,6 @@ function renderOverview() {
         </div>
       </div>
       <div class="hero__stat">
-        <div class="hero__stat-lbl">Top CPI</div>
-        <div class="hero__stat-val">${topInf ? topInf.value.toFixed(1) : '—'}<span class="unit">%</span></div>
-        <div class="hero__stat-delta"><span class="delta-neg">${topInf?.name || '—'}</span></div>
-      </div>
-      <div class="hero__stat">
-        <div class="hero__stat-lbl">Top debt/GDP</div>
-        <div class="hero__stat-val">${topDebt ? topDebt.value.toFixed(0) : '—'}<span class="unit">%</span></div>
-        <div class="hero__stat-delta"><span class="delta-warn">${topDebt?.name || '—'}</span></div>
-      </div>
-      <div class="hero__stat">
         <div class="hero__stat-lbl">Fiscal stress</div>
         <div class="hero__stat-val">${debtFlags.length}<span class="unit">flags</span></div>
         <div class="hero__stat-delta"><span class="delta-warn">debt &gt; 100% of GDP</span></div>
@@ -160,7 +148,7 @@ function renderOverview() {
 
   <!-- KPI tiles -->
   <div class="sec-head">
-    <div class="sec-head__title">Key indicators <span class="count">/ 5</span><span class="sec-head__sub">latest reads, 10y trend</span></div>
+    <div class="sec-head__title">Signals beyond the headline <span class="count">/ 5</span><span class="sec-head__sub">latest reads, 10y trend</span></div>
     <div class="sec-head__actions">
       ${inG20 ? `<button class="sec-head__tab active" onclick="overviewFilterClass('all',this)" title="All G20 economies">All G20</button>
       <button class="sec-head__tab" onclick="overviewFilterClass('ae',this)" title="Advanced economies">AE</button>
@@ -169,7 +157,11 @@ function renderOverview() {
   </div>
 
   <div class="kpi-grid" id="kpi-grid">
-    ${renderKPITiles(totalGDP, medianGrowth, medianInf, memberExpand, memberTotal, debtRank, latestYear)}
+    ${renderKPITiles(growthRank.filter(nonEU), infRank.filter(nonEU), unempRank.filter(nonEU), debtRank.filter(nonEU), caRank.filter(nonEU), latestYear)}
+  </div>
+
+  <div class="overview-risk-summary" aria-label="Priority risk signals">
+    ${renderRiskSummary(cpiFlags, shrinkFlags, debtFlags)}
   </div>
 
   ${inG20 ? '' : renderWorldMapPanel()}
@@ -205,7 +197,7 @@ function renderOverview() {
 
   <!-- Rankings table -->
   <div class="sec-head">
-    <div class="sec-head__title">${inG20 ? 'All economies' : 'Largest economies'} <span class="count">/ ${inG20 ? `${tableRows.length} countries` : `${Math.min(50, tableRows.length)} of ${tableRows.length}`}</span><span class="sec-head__sub">${inG20 ? 'click row → country profile · EU aggregate on Countries page' : 'click row → country profile · every economy on Countries page'}</span></div>
+    <div class="sec-head__title">${inG20 ? 'All economies' : 'Largest economies'} <span class="count" id="overview-rank-count">/ ${Math.min(overviewRankingLimit(), tableRows.length)} of ${tableRows.length}</span><span class="sec-head__sub">${inG20 ? 'click row → country profile · EU aggregate on Countries page' : 'click row → country profile · every economy on Countries page'}</span></div>
     <div class="sec-head__actions">
       <button class="sec-head__tab active" onclick="overviewSortTable('gdp',this)">By GDP</button>
       <button class="sec-head__tab" onclick="overviewSortTable('growth',this)">By growth</button>
@@ -213,8 +205,8 @@ function renderOverview() {
     </div>
   </div>
 
-  <div class="panel">
-    <table class="rank-table">
+  <div class="panel overview-rank-wrap">
+    <table class="rank-table rank-table--overview">
       <thead>
         <tr>
           <th class="col-no">#</th>
@@ -231,12 +223,16 @@ function renderOverview() {
         </tr>
       </thead>
       <tbody id="rank-tbody">
-        ${renderRankingRows(inG20 ? tableRows : tableRows.slice(0, 50))}
+        ${renderRankingRows(tableRows.slice(0, overviewRankingLimit()))}
       </tbody>
     </table>
+    ${tableRows.length > overviewRankingLimit() ? `<div class="overview-rank-more"><button class="button-secondary" id="overview-rank-toggle" type="button" aria-expanded="false" onclick="overviewToggleRankings(this)">Show all ${tableRows.length} economies</button></div>` : ''}
   </div>
 
   <!-- Risk register -->
+  <details class="overview-disclosure overview-disclosure--risk">
+    <summary><span>Detailed risk register</span><small>${cpiFlags.length + shrinkFlags.length + debtFlags.length} threshold flags · inflation, contraction and debt</small></summary>
+  <div class="overview-disclosure__content">
   <div class="sec-head">
     <div class="sec-head__title">Risk register <span class="count" id="risk-total">/ ${cpiFlags.length + shrinkFlags.length + debtFlags.length} flags</span><span class="sec-head__sub">inflation, contraction and debt screens · all screens on Risk flags</span></div>
     <div class="sec-head__actions">
@@ -263,7 +259,7 @@ function renderOverview() {
       ${shrinkFlags.length
         ? renderRiskRows(inG20 ? shrinkFlags : shrinkFlags.slice(0, 12), c => `Output contracted YoY · ${c.region}`,
             c => `<span class="v-neg">${c.value.toFixed(1)}%</span>`, 'GROWTH')
-        : `<div class="risk-row"><div class="risk-row__main"><span class="risk-row__desc v-mute">No ${PEER()} economy contracting this quarter.</span></div><div></div></div>`}
+        : `<div class="risk-row"><div class="risk-row__main"><span class="risk-row__desc v-mute">No ${PEER()} economy contracting in the latest annual reading.</span></div><div></div></div>`}
     </div>
     <div class="panel" data-severity="medium" id="risk-panel-debt">
       <div class="panel__head">
@@ -274,6 +270,7 @@ function renderOverview() {
          c => `<span class="v-warn">${c.value.toFixed(0)}%</span>`, 'OF GDP')}
     </div>
   </div>
+  </div></details>
 
   <!-- Global Outlook editorial -->
   ${renderGlobalOutlookComputed()}
@@ -284,10 +281,9 @@ function renderOverview() {
   <div class="panel mb-20" id="track-record"></div>` : ''}
 
   <!-- Data sources table -->
-  <div class="sec-head" style="margin-top:24px">
-    <div class="sec-head__title">Data sources</div>
-  </div>
-  <div class="panel mb-20">
+  <details class="overview-disclosure">
+    <summary><span>Data sources</span><small>${sourceRows().length} indicators · coverage and frequency</small></summary>
+  <div class="panel overview-disclosure__panel">
     <div class="panel__body" style="padding:0">
       <div class="table-scroll"><table style="width:100%;border-collapse:collapse;font-size:12px">
         <thead>
@@ -310,10 +306,12 @@ function renderOverview() {
         </tbody>
       </table></div>
     </div>
-  </div>
+  </div></details>
 
   <!-- Methodology -->
-  <div class="methodology">
+  <details class="overview-disclosure">
+    <summary><span>About this dataset</span><small>Methodology, release cut-offs and refresh cadence</small></summary>
+  <div class="methodology overview-disclosure__body">
     <h4>About this dataset</h4>
     Latest reads at the publication cut-off (${latestYear}) for ${scopeEconomies().length} economies in ${A.escapeText(window.Scope ? Scope.label() : 'G20')} scope. All data comes from official open APIs:
     <a href="https://data.worldbank.org" target="_blank" rel="noopener">World Bank Open Data</a> (CC BY 4.0) ·
@@ -324,7 +322,7 @@ function renderOverview() {
     <a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED</a>.
     Latest reads are capped at ${window.LATEST_ACTUAL_YEAR}; several ${window.LATEST_ACTUAL_YEAR} values are IMF estimates rather than final outturns, and IMF projections are never shown as latest actuals. Coverage counts economies with a latest actual value; aggregates (World, EU, income groups) are excluded.
     Structural series refresh monthly (GitHub Actions → Supabase); policy rates, FX and market series refresh every 6 hours on weekdays and are official daily references, not tick prices.
-  </div>
+  </div></details>
 
   <div class="page-foot">
     <span>g20.monitor · ${latestYear}</span>
@@ -360,46 +358,33 @@ function oecdGrowth(year) {
 }
 
 // ── KPI tiles ──────────────────────────────────────────────────────────────────
-function renderKPITiles(totalGDP, medianGrowth, medianInf, expanding, total, debtRank, year) {
-  const gdpSeries   = g20Sum('GDP').map(d => d.value / 1e12);
-  const growthSer   = g20Median('GDP_GROWTH');
-  const prevGrowth  = growthSer.length > 1 ? growthSer[growthSer.length - 2] : null;
-  const oecdNow     = oecdGrowth(year);
+function renderKPITiles(growthRank, infRank, unempRank, debtRank, caRank, year) {
   const cpiSer      = g20Median('INFLATION');
   const unempSer    = g20Median('UNEMPLOYMENT');
   const debtSer     = g20Median('DEBT_GDP');
+  const caSer       = g20Median('CURRENT_ACC');
   const prevDebt    = debtSer.length > 1 ? debtSer[debtSer.length - 2] : null;
-  const medianDebt = median(debtRank.filter(c => c.iso3 !== 'EUU').map(c => c.value));
+  const topGrowth   = [...growthRank].sort((a, b) => b.value - a.value)[0];
+  const topInflation = [...infRank].sort((a, b) => b.value - a.value)[0];
+  const medianUnemp = median(unempRank.map(c => c.value));
+  const medianDebt  = median(debtRank.map(c => c.value));
+  const medianCA    = median(caRank.map(c => c.value));
 
   const tiles = [
     {
-      lbl: 'Aggregate GDP', val: (totalGDP/1e12).toFixed(1), unit: 'USD tn',
-      delta: `<span class="d-pos">${expanding} of ${total}</span> ${(!window.Scope || Scope.isG20()) ? 'members' : 'economies'} expanding`,
-      series: gdpSeries, cls: 'pos',
+      lbl: 'Growth leader', val: topGrowth ? topGrowth.value.toFixed(1) : '—', unit: '% YoY',
+      delta: topGrowth ? `<span class="d-pos">${A.escapeText(topGrowth.name)}</span> · ${year}` : 'No reading available',
+      series: growthRank.slice(0, 10).map(c => c.value), cls: 'pos',
     },
     {
-      lbl: 'Median growth', val: medianGrowth.toFixed(1), unit: '% YoY',
-      delta: (prevGrowth
-        ? `<span class="${medianGrowth >= prevGrowth.value ? 'd-pos' : 'd-warn'}">${medianGrowth >= prevGrowth.value ? '▲' : '▼'} ${Math.abs(medianGrowth - prevGrowth.value).toFixed(1)} pp</span> vs ${prevGrowth.year}`
-        : `<span>${year}</span>`) + (oecdNow !== null ? ` · OECD ${oecdNow.toFixed(1)}%` : ''),
-      series: growthSer.map(d => d.value),
-      cls: medianGrowth >= 0 ? 'pos' : 'neg',
+      lbl: 'Highest inflation', val: topInflation ? topInflation.value.toFixed(1) : '—', unit: '%',
+      delta: topInflation ? `<span class="d-neg">${A.escapeText(topInflation.name)}</span> · latest actual` : 'No reading available',
+      series: cpiSer.map(d => d.value), cls: 'neg',
     },
     {
-      lbl: 'Median CPI', val: medianInf.toFixed(1), unit: '%',
-      delta: `<span class="${medianInf <= 4 ? 'd-pos' : 'd-warn'}">${medianInf <= 4 ? 'Moderate' : 'Elevated'}</span> ex. outliers`,
-      series: cpiSer.map(d => d.value),
-      cls: 'neg',
-    },
-    {
-      lbl: 'Unemployment median', val: '—', unit: '%',
+      lbl: 'Unemployment median', val: medianUnemp.toFixed(1), unit: '%',
       delta: `<span class="d-pos">Latest available</span> ${PEER()} median`,
-      series: unempSer.map(d => d.value),
-      cls: '',
-      computeVal: () => {
-        const r = window.G20Data.getRanking('UNEMPLOYMENT').filter(c => c.iso3 !== 'EUU');
-        return median(r.map(c => c.value)).toFixed(1);
-      },
+      series: unempSer.map(d => d.value), cls: '',
     },
     {
       lbl: 'Debt/GDP median', val: medianDebt.toFixed(0), unit: '%',
@@ -407,10 +392,14 @@ function renderKPITiles(totalGDP, medianGrowth, medianInf, expanding, total, deb
       series: debtSer.map(d => d.value),
       cls: medianDebt > 90 ? 'neg' : 'pos',
     },
+    {
+      lbl: 'Current account median', val: medianCA.toFixed(1), unit: '% GDP',
+      delta: `<span class="${medianCA < -2 ? 'd-warn' : 'd-pos'}">${medianCA < -2 ? 'External deficit' : 'Broadly balanced'}</span> · ${year}`,
+      series: caSer.map(d => d.value), cls: medianCA < -2 ? 'neg' : 'pos',
+    },
   ];
 
   return tiles.map(t => {
-    const displayVal = t.computeVal ? t.computeVal() : t.val;
     const sparkHtml = t.series && t.series.length > 1
       ? tileSpark(t.series, 200, 30, t.cls)
       : '';
@@ -420,11 +409,26 @@ function renderKPITiles(totalGDP, medianGrowth, medianInf, expanding, total, deb
       <div class="kpi-tile__head">
         <span class="kpi-tile__lbl">${t.lbl}</span>
       </div>
-      <div class="kpi-tile__val">${displayVal}<span class="unit">${t.unit}</span></div>
+      <div class="kpi-tile__val">${t.val}<span class="unit">${t.unit}</span></div>
       <div class="kpi-tile__delta">${t.delta}</div>
       <div class="kpi-tile__spark">${sparkHtml}</div>
     </div>`;
   }).join('');
+}
+
+function renderRiskSummary(cpiFlags, shrinkFlags, debtFlags) {
+  const cards = [
+    { label: 'Inflation outliers', count: cpiFlags.length, threshold: 'CPI above 8%', tone: cpiFlags.length ? 'high' : 'clear', route: 'flags' },
+    { label: 'Contracting economies', count: shrinkFlags.length, threshold: 'Real growth below 0%', tone: shrinkFlags.length ? 'high' : 'clear', route: 'flags' },
+    { label: 'Fiscal stress', count: debtFlags.length, threshold: 'Debt above 100% of GDP', tone: debtFlags.length ? 'watch' : 'clear', route: 'flags' },
+  ];
+  return cards.map(card => `
+    <button class="overview-risk-card overview-risk-card--${card.tone}" type="button" onclick="navTo('${card.route}')" aria-label="Open ${card.label} in Risk flags">
+      <span class="overview-risk-card__label">${card.label}</span>
+      <strong>${card.count}</strong>
+      <span class="overview-risk-card__threshold">${card.threshold}</span>
+      <span class="overview-risk-card__link">Review flags →</span>
+    </button>`).join('');
 }
 
 // ── Growth bar chart ───────────────────────────────────────────────────────────
@@ -513,13 +517,13 @@ function renderRankingRows(rows) {
       <td class="col-name">
         <div class="country-cell">${A.escapeText(c.name)}<span class="sub">${c.iso3}</span></div>
       </td>
-      <td>${c.value ? A.fmtTn(c.value) : '—'}</td>
-      <td class="${growthCls}">${gv !== undefined ? A.fmtSignedPct(gv) : '—'}</td>
-      <td class="${infCls}">${iv !== undefined ? iv.toFixed(1) + '%' : '—'}</td>
-      <td>${unemp?.value !== undefined ? unemp.value.toFixed(1) + '%' : '—'}</td>
-      <td class="${debtCls}">${dv !== undefined ? dv.toFixed(0) + '%' : '—'}</td>
-      <td class="${caCls}">${cav !== undefined ? A.fmtSignedPct(cav).slice(0, -1) : '—'}</td>
-      <td>${window.computeRiskScore ? (() => { const r = window.computeRiskScore(c.iso3); return `<span class="risk-pill ${r.labelCls}" title="${r.signals.join(', ')}">${r.label}</span>`; })() : '—'}</td>
+      <td data-label="GDP">${c.value ? A.fmtTn(c.value) : '—'}</td>
+      <td data-label="Growth" class="${growthCls}">${gv !== undefined ? A.fmtSignedPct(gv) : '—'}</td>
+      <td data-label="CPI" class="${infCls}">${iv !== undefined ? iv.toFixed(1) + '%' : '—'}</td>
+      <td data-label="Unemployment">${unemp?.value !== undefined ? unemp.value.toFixed(1) + '%' : '—'}</td>
+      <td data-label="Debt / GDP" class="${debtCls}">${dv !== undefined ? dv.toFixed(0) + '%' : '—'}</td>
+      <td data-label="Current account" class="${caCls}">${cav !== undefined ? A.fmtSignedPct(cav).slice(0, -1) : '—'}</td>
+      <td data-label="Fragility">${window.computeRiskScore ? (() => { const r = window.computeRiskScore(c.iso3); return `<span class="risk-pill ${r.labelCls}" title="${r.signals.join(', ')}">${r.label}</span>`; })() : '—'}</td>
       <td class="col-spark">${sparkSVG(gdpSeries, 86, 22)}</td>
     </tr>`;
   }).join('');
@@ -618,11 +622,9 @@ function renderGlobalOutlookComputed() {
     </li>`;
 
   return `
-  <div class="sec-head">
-    <div class="sec-head__title">${PEER_CAP()} Outlook<span class="sec-head__sub">${latestYear} · computed from live World Bank and IMF data</span></div>
-  </div>
-
-  <div class="panel" style="margin-bottom:24px">
+  <details class="overview-disclosure overview-disclosure--outlook">
+    <summary><span>${PEER_CAP()} outlook</span><small>${latestYear} · computed from live World Bank and IMF data</small></summary>
+  <div class="panel overview-disclosure__panel">
     <div class="panel__body" style="padding:20px 24px">
       <div class="outlook-grid" style="display:grid;grid-template-columns:1fr 260px;gap:32px;align-items:start">
 
@@ -643,7 +645,7 @@ function renderGlobalOutlookComputed() {
 
       </div>
     </div>
-  </div>`;
+  </div></details>`;
 }
 
 // ── Utility ────────────────────────────────────────────────────────────────────
@@ -665,16 +667,42 @@ function mountOverviewCharts() {
 }
 
 // ── Ranking table sort ────────────────────────────────────────────────────────
-window.overviewSortTable = function(mode, btn) {
-  document.querySelectorAll('[onclick^="overviewSortTable"]').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+let _overviewRankingMode = 'gdp';
+let _overviewRankingsExpanded = false;
+const overviewRankingLimit = () => window.innerWidth <= 640 ? 10 : 15;
+
+function overviewRankingRows(mode) {
   const nonEU = c => c.iso3 !== 'EUU';
   const gdpRank    = window.G20Data.getRanking('GDP').filter(nonEU);
   const growthRank = window.G20Data.getRanking('GDP_GROWTH').filter(nonEU);
   const infRank    = window.G20Data.getRanking('INFLATION').filter(nonEU).sort((a,b) => b.value - a.value);
-  const rows = mode === 'growth' ? growthRank : mode === 'cpi' ? infRank : gdpRank;
+  return mode === 'growth' ? growthRank : mode === 'cpi' ? infRank : gdpRank;
+}
+
+function paintOverviewRankings() {
+  const rows = overviewRankingRows(_overviewRankingMode);
   const tbody = document.getElementById('rank-tbody');
-  if (tbody) tbody.innerHTML = renderRankingRows(rows);
+  if (tbody) tbody.innerHTML = renderRankingRows(_overviewRankingsExpanded ? rows : rows.slice(0, overviewRankingLimit()));
+  const count = document.getElementById('overview-rank-count');
+  if (count) count.textContent = `/ ${_overviewRankingsExpanded ? rows.length : Math.min(overviewRankingLimit(), rows.length)} of ${rows.length}`;
+  const toggle = document.getElementById('overview-rank-toggle');
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', String(_overviewRankingsExpanded));
+    toggle.textContent = _overviewRankingsExpanded ? `Show top ${overviewRankingLimit()}` : `Show all ${rows.length} economies`;
+  }
+}
+
+window.overviewSortTable = function(mode, btn) {
+  document.querySelectorAll('[onclick^="overviewSortTable"]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  _overviewRankingMode = mode;
+  _overviewRankingsExpanded = false;
+  paintOverviewRankings();
+};
+
+window.overviewToggleRankings = function(btn) {
+  _overviewRankingsExpanded = !(btn?.getAttribute('aria-expanded') === 'true');
+  paintOverviewRankings();
 };
 
 // ── KPI group filter: All G20 / Advanced / Emerging ───────────────────────────
@@ -687,20 +715,16 @@ window.overviewFilterClass = function(group, btn) {
   const inGroup = c => group === 'all' ? true : group === 'ae' ? AE_SET.has(c.iso3) : !AE_SET.has(c.iso3);
   const filt = arr => arr.filter(nonEU).filter(inGroup);
 
-  const gdpRank    = filt(window.G20Data.getRanking('GDP'));
   const growthRank = filt(window.G20Data.getRanking('GDP_GROWTH'));
   const infRank    = filt(window.G20Data.getRanking('INFLATION'));
   const debtRank   = filt(window.G20Data.getRanking('DEBT_GDP')).sort((a, b) => b.value - a.value);
 
-  const totalGDP     = gdpRank.reduce((s, c) => s + (c.value || 0), 0);
-  const growthVals   = growthRank.map(c => c.value);
-  const medianGrowth = median(growthVals);
-  const medianInf    = median(infRank.map(c => c.value));
-  const expandingN   = growthVals.filter(v => v > 0).length;
-  const latestYear   = gdpRank[0]?.year || '2024';
+  const latestYear   = growthRank[0]?.year || '2024';
 
+  const unempRank = filt(window.G20Data.getRanking('UNEMPLOYMENT'));
+  const caRank = filt(window.G20Data.getRanking('CURRENT_ACC'));
   const grid = document.getElementById('kpi-grid');
-  if (grid) grid.innerHTML = renderKPITiles(totalGDP, medianGrowth, medianInf, expandingN, growthVals.length, debtRank, latestYear);
+  if (grid) grid.innerHTML = renderKPITiles(growthRank, infRank, unempRank, debtRank, caRank, latestYear);
 };
 
 // ── Risk register severity filter ─────────────────────────────────────────────

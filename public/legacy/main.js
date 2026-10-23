@@ -452,6 +452,18 @@
     window.dispatchEvent(new Event('resize')); // let Chart.js re-measure its canvases
   }
   window.togglePresentMode = function () { applyPresentMode(!document.documentElement.classList.contains('present')); };
+  window.toggleMobileTools = function (force) {
+    const menu = document.getElementById('mobile-tools-menu');
+    const btn = document.getElementById('mobile-tools-btn');
+    if (!menu || !btn) return;
+    const open = typeof force === 'boolean' ? force : menu.hidden;
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+  };
+  document.addEventListener('click', (event) => {
+    const wrap = event.target.closest?.('.mobile-tools-wrap');
+    if (!wrap) window.toggleMobileTools(false);
+  });
   (function initPresentMode() {
     let on = /[?&]present\b/.test(location.search);
     try { if (!on) on = localStorage.getItem('g20-present') === '1'; } catch (e) { /* ignore */ }

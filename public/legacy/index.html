@@ -113,12 +113,20 @@
           <button class="pill-btn share-btn" id="share-btn" onclick="toggleShareMenu()" aria-haspopup="menu" aria-expanded="false" title="Share this view or download a one-page brief"><span class="share-btn__lbl">Share</span></button>
           <div class="share-menu" id="share-menu" role="menu" hidden></div>
         </div>
+        <div class="mobile-tools-wrap">
+          <button class="pill-btn mobile-tools-btn" id="mobile-tools-btn" type="button" onclick="toggleMobileTools()" aria-haspopup="menu" aria-expanded="false" aria-label="More actions">•••</button>
+          <div class="share-menu mobile-tools-menu" id="mobile-tools-menu" role="menu" hidden>
+            <button class="share-menu__item" role="menuitem" onclick="toggleMobileTools(false);shareCopyLink()"><span>Copy share link</span></button>
+            <button class="share-menu__item" role="menuitem" onclick="toggleMobileTools(false);shareDownloadBrief()"><span>Download brief</span></button>
+            <button class="share-menu__item" role="menuitem" onclick="toggleMobileTools(false);togglePresentMode()"><span>Present mode</span></button>
+          </div>
+        </div>
         <button class="pill-btn" id="present-btn" onclick="togglePresentMode()" aria-pressed="false" title="Larger text and charts for screen sharing">Present</button>
-        <button class="ask-btn" id="ask-btn" onclick="toggleAgentDrawer()">
-          <svg class="ai-glyph" viewBox="0 0 14 14" fill="currentColor">
+        <button class="ask-btn" id="ask-btn" onclick="toggleAgentDrawer()" aria-label="Ask AI">
+          <svg class="ai-glyph" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
             <path d="M7 0l1.5 3.5L12 5 8.5 6.5 7 10 5.5 6.5 2 5l3.5-1.5z"/>
           </svg>
-          Ask AI
+          <span class="ask-btn__label">Ask AI</span><span class="ask-btn__mobile" aria-hidden="true">AI</span>
         </button>
       </div>
     </header>

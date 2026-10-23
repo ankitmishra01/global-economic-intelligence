@@ -10,7 +10,7 @@
   let _wc = null;
   let _loading = null;
   let _showAll = false;
-  const TOP_N = 8;
+  const TOP_N = 5;
 
   function load() {
     if (_wc) return Promise.resolve(_wc);
