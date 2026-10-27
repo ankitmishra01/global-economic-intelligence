@@ -1,19 +1,19 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-27T02:08:50.949Z",
+ "generatedAt": "2026-10-27T10:40:41.387Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 19.45,
-   "date": "2026-10-23",
-   "previous": 19.03,
-   "previousDate": "2026-10-22",
-   "change": 0.42,
-   "changePct": 2.21,
-   "source": "Cboe via FRED (VIXCLS)",
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
+   "unit": "USD/bbl",
+   "value": 115.22,
+   "date": "2026-10-20",
+   "previous": 118.82,
+   "previousDate": "2026-10-19",
+   "change": -3.6,
+   "changePct": -3.03,
+   "source": "EIA via FRED (DCOILBRENTEU)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
@@ -33,21 +33,6 @@
    "releaseCadence": "daily",
    "freshness": "stale"
   },
-  "USD_BROAD": {
-   "key": "USD_BROAD",
-   "label": "Broad dollar",
-   "unit": "index",
-   "value": 121.32,
-   "date": "2026-10-23",
-   "previous": 121.353,
-   "previousDate": "2026-10-22",
-   "change": -0.033,
-   "changePct": -0.03,
-   "source": "Federal Reserve via FRED (DTWEXBGS)",
-   "frequency": "daily",
-   "releaseCadence": "weekly",
-   "freshness": "current"
-  },
   "WTI": {
    "key": "WTI",
    "label": "WTI",
@@ -63,20 +48,35 @@
    "releaseCadence": "daily",
    "freshness": "stale"
   },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
-   "unit": "USD/bbl",
-   "value": 115.22,
-   "date": "2026-10-20",
-   "previous": 118.82,
-   "previousDate": "2026-10-19",
-   "change": -3.6,
-   "changePct": -3.03,
-   "source": "EIA via FRED (DCOILBRENTEU)",
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 19.45,
+   "date": "2026-10-23",
+   "previous": 19.03,
+   "previousDate": "2026-10-22",
+   "change": 0.42,
+   "changePct": 2.21,
+   "source": "Cboe via FRED (VIXCLS)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
+  },
+  "USD_BROAD": {
+   "key": "USD_BROAD",
+   "label": "Broad dollar",
+   "unit": "index",
+   "value": 121.32,
+   "date": "2026-10-23",
+   "previous": 121.353,
+   "previousDate": "2026-10-22",
+   "change": -0.033,
+   "changePct": -0.03,
+   "source": "Federal Reserve via FRED (DTWEXBGS)",
+   "frequency": "daily",
+   "releaseCadence": "weekly",
+   "freshness": "current"
   }
  },
  "fx": {
