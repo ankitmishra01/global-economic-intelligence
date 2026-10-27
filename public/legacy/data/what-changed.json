@@ -1,16 +1,16 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-26T17:27:28.072Z",
+ "generatedAt": "2026-10-27T02:08:53.350Z",
  "asOf": "2026-10-26",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-26T11:14:06.393Z"
+  "realtime": "2026-10-26T17:27:25.522Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "fx": 2,
-  "market": 4,
-  "policy": 14
+  "policy": 14,
+  "market": 4
  },
  "items": [
   {
@@ -26,25 +26,8 @@
    "direction": "weaker",
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
-   "materiality": 16.11,
-   "g20": true
-  },
-  {
-   "id": "market:US10Y:2026-10-22",
-   "kind": "market",
-   "iso3": null,
-   "market": "US10Y",
-   "title": "US 10Y fell -17bp to 4.96%",
-   "value": 4.96,
-   "previous": 5.13,
-   "change": -0.17,
-   "unit": "pp",
-   "direction": "down",
-   "asOf": "2026-10-22",
-   "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 4.25,
+   "materiality": 16.11,
    "g20": true
   },
   {
@@ -184,20 +167,20 @@
    "g20": true
   },
   {
-   "id": "fx:MXN:30d:weaker",
-   "kind": "fx",
-   "iso3": "MEX",
-   "currency": "MXN",
-   "title": "MXN weakened 7.7% against the US dollar over 30 days",
-   "value": 18.7819,
-   "change": 7.7,
-   "unit": "% vs USD",
-   "window": "30d",
-   "direction": "weaker",
-   "asOf": "2026-10-23",
-   "source": "European Central Bank euro foreign exchange reference rates",
+   "id": "market:US10Y:2026-10-22",
+   "kind": "market",
+   "iso3": null,
+   "market": "US10Y",
+   "title": "US 10Y fell -17bp to 4.96%",
+   "value": 4.96,
+   "previous": 5.13,
+   "change": -0.17,
+   "unit": "pp",
+   "direction": "down",
+   "asOf": "2026-10-22",
+   "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 2.772,
+   "materiality": 2.55,
    "g20": true,
    "carried": true
   },
@@ -253,20 +236,20 @@
    "g20": false
   },
   {
-   "id": "market:VIX:2026-10-22",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +14.1% to 19.0",
-   "value": 19.03,
-   "previous": 16.68,
-   "change": 14.09,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-22",
-   "source": "Cboe via FRED (VIXCLS)",
+   "id": "fx:MXN:30d:weaker",
+   "kind": "fx",
+   "iso3": "MEX",
+   "currency": "MXN",
+   "title": "MXN weakened 7.7% against the US dollar over 30 days",
+   "value": 18.7819,
+   "change": 7.7,
+   "unit": "% vs USD",
+   "window": "30d",
+   "direction": "weaker",
+   "asOf": "2026-10-23",
+   "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 2.114,
+   "materiality": 1.663,
    "g20": true,
    "carried": true
   },
@@ -337,6 +320,24 @@
    "newSinceLastRefresh": false,
    "materiality": 1.56,
    "g20": false
+  },
+  {
+   "id": "market:VIX:2026-10-22",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +14.1% to 19.0",
+   "value": 19.03,
+   "previous": 16.68,
+   "change": 14.09,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-10-22",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 1.268,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "market:VIX:2026-10-16",
