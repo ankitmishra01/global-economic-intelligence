@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-27T16:43:34.022Z",
+ "generatedAt": "2026-10-27T21:23:06.641Z",
  "asOf": "2026-10-27",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-27T10:40:41.387Z"
+  "realtime": "2026-10-27T16:43:31.468Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -13,6 +13,23 @@
   "market": 4
  },
  "items": [
+  {
+   "id": "fx:BRL:2026-10-27:1d",
+   "kind": "fx",
+   "iso3": "BRA",
+   "currency": "BRL",
+   "title": "BRL strengthened 4.3% against the US dollar over 1 day",
+   "value": 5.3474,
+   "change": -4.31,
+   "unit": "% vs USD",
+   "window": "1d",
+   "direction": "stronger",
+   "asOf": "2026-10-27",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 6.465,
+   "g20": true
+  },
   {
    "id": "fx:BRL:2026-10-26:1d",
    "kind": "fx",
@@ -27,26 +44,9 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 9.666,
+   "materiality": 5.8,
    "g20": true,
    "carried": true
-  },
-  {
-   "id": "fx:BRL:2026-10-27:1d",
-   "kind": "fx",
-   "iso3": "BRA",
-   "currency": "BRL",
-   "title": "BRL strengthened 4.3% against the US dollar over 1 day",
-   "value": 5.3474,
-   "change": -4.31,
-   "unit": "% vs USD",
-   "window": "1d",
-   "direction": "stronger",
-   "asOf": "2026-10-27",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
-   "materiality": 6.465,
-   "g20": true
   },
   {
    "id": "policy:JPN:1.25",
@@ -317,7 +317,7 @@
    "asOf": "2026-10-22",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.918,
+   "materiality": 0.551,
    "g20": true,
    "carried": true
   },
@@ -335,7 +335,7 @@
    "asOf": "2026-10-23",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.599,
+   "materiality": 0.359,
    "g20": true,
    "carried": true
   },
@@ -353,7 +353,7 @@
    "asOf": "2026-10-22",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.457,
+   "materiality": 0.274,
    "g20": true,
    "carried": true
   },
