@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-28T02:23:04.190Z",
+ "generatedAt": "2026-10-28T11:25:14.303Z",
  "asOf": "2026-10-27",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-27T21:23:04.039Z"
+  "realtime": "2026-10-28T02:23:01.680Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -167,24 +167,6 @@
    "g20": true
   },
   {
-   "id": "fx:BRL:2026-10-26:1d",
-   "kind": "fx",
-   "iso3": "BRA",
-   "currency": "BRL",
-   "title": "BRL weakened 10.7% against the US dollar over 1 day",
-   "value": 5.5884,
-   "change": 10.74,
-   "unit": "% vs USD",
-   "window": "1d",
-   "direction": "weaker",
-   "asOf": "2026-10-26",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 3.48,
-   "g20": true,
-   "carried": true
-  },
-  {
    "id": "market:BRENT:2026-10-20",
    "kind": "market",
    "iso3": null,
@@ -234,6 +216,24 @@
    "newSinceLastRefresh": false,
    "materiality": 2.4,
    "g20": false
+  },
+  {
+   "id": "fx:BRL:2026-10-26:1d",
+   "kind": "fx",
+   "iso3": "BRA",
+   "currency": "BRL",
+   "title": "BRL weakened 10.7% against the US dollar over 1 day",
+   "value": 5.5884,
+   "change": 10.74,
+   "unit": "% vs USD",
+   "window": "1d",
+   "direction": "weaker",
+   "asOf": "2026-10-26",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 2.088,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "policy:DNK:2.1",
@@ -317,7 +317,7 @@
    "asOf": "2026-10-22",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.331,
+   "materiality": 0.199,
    "g20": true,
    "carried": true
   },
@@ -335,7 +335,7 @@
    "asOf": "2026-10-23",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.215,
+   "materiality": 0.129,
    "g20": true,
    "carried": true
   },
@@ -353,7 +353,7 @@
    "asOf": "2026-10-22",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.164,
+   "materiality": 0.098,
    "g20": true,
    "carried": true
   },
