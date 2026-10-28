@@ -1,22 +1,22 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-28T02:23:01.680Z",
+ "generatedAt": "2026-10-28T11:25:12.011Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
-   "unit": "USD/bbl",
-   "value": 107.89,
-   "date": "2026-10-20",
-   "previous": 110.01,
-   "previousDate": "2026-10-19",
-   "change": -2.12,
-   "changePct": -1.93,
-   "source": "EIA via FRED (DCOILWTICO)",
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 5,
+   "date": "2026-10-26",
+   "previous": 5,
+   "previousDate": "2026-10-23",
+   "change": 0,
+   "changePct": 0,
+   "source": "U.S. Treasury via FRED (DGS10)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "stale"
+   "freshness": "current"
   },
   "USD_BROAD": {
    "key": "USD_BROAD",
@@ -48,20 +48,20 @@
    "releaseCadence": "daily",
    "freshness": "stale"
   },
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 5,
-   "date": "2026-10-26",
-   "previous": 5,
-   "previousDate": "2026-10-23",
-   "change": 0,
-   "changePct": 0,
-   "source": "U.S. Treasury via FRED (DGS10)",
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 107.89,
+   "date": "2026-10-20",
+   "previous": 110.01,
+   "previousDate": "2026-10-19",
+   "change": -2.12,
+   "changePct": -1.93,
+   "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "current"
+   "freshness": "stale"
   },
   "VIX": {
    "key": "VIX",
