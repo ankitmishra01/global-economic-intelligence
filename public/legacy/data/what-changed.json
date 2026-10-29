@@ -1,36 +1,18 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-28T21:42:53.457Z",
+ "generatedAt": "2026-10-29T02:29:58.249Z",
  "asOf": "2026-10-28",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-28T11:25:12.011Z"
+  "realtime": "2026-10-28T21:42:50.548Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
-  "fx": 4,
   "policy": 14,
-  "market": 5
+  "market": 5,
+  "fx": 4
  },
  "items": [
-  {
-   "id": "fx:BRL:2026-10-27:1d",
-   "kind": "fx",
-   "iso3": "BRA",
-   "currency": "BRL",
-   "title": "BRL strengthened 4.3% against the US dollar over 1 day",
-   "value": 5.3474,
-   "change": -4.31,
-   "unit": "% vs USD",
-   "window": "1d",
-   "direction": "stronger",
-   "asOf": "2026-10-27",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 3.879,
-   "g20": true,
-   "carried": true
-  },
   {
    "id": "policy:JPN:1.25",
    "kind": "policy",
@@ -180,7 +162,7 @@
    "direction": "down",
    "asOf": "2026-10-27",
    "source": "EIA via FRED (DCOILBRENTEU)",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 3.267,
    "g20": true
   },
@@ -197,7 +179,7 @@
    "direction": "weaker",
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 2.5,
    "g20": false
   },
@@ -234,6 +216,24 @@
    "newSinceLastRefresh": false,
    "materiality": 2.4,
    "g20": false
+  },
+  {
+   "id": "fx:BRL:2026-10-27:1d",
+   "kind": "fx",
+   "iso3": "BRA",
+   "currency": "BRL",
+   "title": "BRL strengthened 4.3% against the US dollar over 1 day",
+   "value": 5.3474,
+   "change": -4.31,
+   "unit": "% vs USD",
+   "window": "1d",
+   "direction": "stronger",
+   "asOf": "2026-10-27",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 2.327,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "policy:DNK:2.1",
@@ -317,7 +317,7 @@
    "asOf": "2026-10-20",
    "source": "EIA via FRED (DCOILBRENTEU)",
    "newSinceLastRefresh": false,
-   "materiality": 1.515,
+   "materiality": 0.909,
    "g20": true,
    "carried": true
   },
@@ -335,7 +335,7 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 1.253,
+   "materiality": 0.752,
    "g20": true,
    "carried": true
   },
@@ -353,7 +353,7 @@
    "asOf": "2026-10-22",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.119,
+   "materiality": 0.071,
    "g20": true,
    "carried": true
   },
@@ -371,7 +371,7 @@
    "asOf": "2026-10-23",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.077,
+   "materiality": 0.046,
    "g20": true,
    "carried": true
   },
@@ -389,7 +389,7 @@
    "asOf": "2026-10-22",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.059,
+   "materiality": 0.035,
    "g20": true,
    "carried": true
   },

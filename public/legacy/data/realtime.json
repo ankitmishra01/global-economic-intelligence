@@ -1,23 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-28T21:42:50.548Z",
+ "generatedAt": "2026-10-29T02:29:56.116Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 17.52,
-   "date": "2026-10-27",
-   "previous": 18.39,
-   "previousDate": "2026-10-26",
-   "change": -0.87,
-   "changePct": -4.73,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "BRENT": {
    "key": "BRENT",
    "label": "Brent",
@@ -44,6 +29,21 @@
    "change": -1.88,
    "changePct": -1.79,
    "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
+  },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 17.52,
+   "date": "2026-10-27",
+   "previous": 18.39,
+   "previousDate": "2026-10-26",
+   "change": -0.87,
+   "changePct": -4.73,
+   "source": "Cboe via FRED (VIXCLS)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
