@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-29T21:51:17.505Z",
+ "generatedAt": "2026-10-30T02:40:44.516Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
   "US10Y": {
@@ -17,6 +17,36 @@
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
+  },
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 103.37,
+   "date": "2026-10-27",
+   "previous": 105.25,
+   "previousDate": "2026-10-26",
+   "change": -1.88,
+   "changePct": -1.79,
+   "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "delayed"
+  },
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
+   "unit": "USD/bbl",
+   "value": 123.1,
+   "date": "2026-10-27",
+   "previous": 128.12,
+   "previousDate": "2026-10-26",
+   "change": -5.02,
+   "changePct": -3.92,
+   "source": "EIA via FRED (DCOILBRENTEU)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "delayed"
   },
   "USD_BROAD": {
    "key": "USD_BROAD",
@@ -44,36 +74,6 @@
    "change": -0.61,
    "changePct": -3.48,
    "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
-   "unit": "USD/bbl",
-   "value": 123.1,
-   "date": "2026-10-27",
-   "previous": 128.12,
-   "previousDate": "2026-10-26",
-   "change": -5.02,
-   "changePct": -3.92,
-   "source": "EIA via FRED (DCOILBRENTEU)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
-   "unit": "USD/bbl",
-   "value": 103.37,
-   "date": "2026-10-27",
-   "previous": 105.25,
-   "previousDate": "2026-10-26",
-   "change": -1.88,
-   "changePct": -1.79,
-   "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
@@ -369,7 +369,7 @@
      "change": -0.1
     },
     "area": "CN",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "COL": {
@@ -512,7 +512,7 @@
      "change": 0.5
     },
     "area": "ID",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "ISR": {
@@ -538,7 +538,7 @@
      "change": 0.25
     },
     "area": "IN",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "ISL": {

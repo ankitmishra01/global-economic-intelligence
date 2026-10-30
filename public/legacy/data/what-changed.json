@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-30T02:40:47.057Z",
+ "generatedAt": "2026-10-30T11:27:50.210Z",
  "asOf": "2026-10-28",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-29T21:51:17.505Z"
+  "realtime": "2026-10-30T02:40:44.516Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -299,7 +299,7 @@
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.9,
+   "materiality": 0.54,
    "g20": false,
    "carried": true
   },
@@ -317,7 +317,7 @@
    "asOf": "2026-10-27",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.503,
+   "materiality": 0.302,
    "g20": true,
    "carried": true
   },
@@ -335,7 +335,7 @@
    "asOf": "2026-10-20",
    "source": "EIA via FRED (DCOILBRENTEU)",
    "newSinceLastRefresh": false,
-   "materiality": 0.196,
+   "materiality": 0.118,
    "g20": true,
    "carried": true
   },
@@ -353,7 +353,7 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.163,
+   "materiality": 0.098,
    "g20": true,
    "carried": true
   },
@@ -371,7 +371,7 @@
    "asOf": "2026-10-22",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.016,
+   "materiality": 0.01,
    "g20": true,
    "carried": true
   },
@@ -389,7 +389,7 @@
    "asOf": "2026-10-23",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.01,
+   "materiality": 0.006,
    "g20": true,
    "carried": true
   },
@@ -407,7 +407,7 @@
    "asOf": "2026-10-22",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.008,
+   "materiality": 0.005,
    "g20": true,
    "carried": true
   }
