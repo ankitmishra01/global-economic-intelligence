@@ -1,15 +1,15 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-29T21:51:20.225Z",
+ "generatedAt": "2026-10-30T02:40:47.057Z",
  "asOf": "2026-10-28",
  "comparedWith": {
   "latest": "2026-10-17T02:46:15.279Z",
-  "realtime": "2026-10-29T11:35:49.734Z"
+  "realtime": "2026-10-29T21:51:17.505Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "policy": 15,
-  "market": 5,
+  "market": 4,
   "fx": 4
  },
  "items": [
@@ -299,7 +299,7 @@
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 1.5,
+   "materiality": 0.9,
    "g20": false,
    "carried": true
   },
@@ -317,7 +317,7 @@
    "asOf": "2026-10-27",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.838,
+   "materiality": 0.503,
    "g20": true,
    "carried": true
   },
@@ -335,7 +335,7 @@
    "asOf": "2026-10-20",
    "source": "EIA via FRED (DCOILBRENTEU)",
    "newSinceLastRefresh": false,
-   "materiality": 0.327,
+   "materiality": 0.196,
    "g20": true,
    "carried": true
   },
@@ -353,7 +353,7 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.271,
+   "materiality": 0.163,
    "g20": true,
    "carried": true
   },
@@ -371,7 +371,7 @@
    "asOf": "2026-10-22",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.026,
+   "materiality": 0.016,
    "g20": true,
    "carried": true
   },
@@ -389,7 +389,7 @@
    "asOf": "2026-10-23",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.017,
+   "materiality": 0.01,
    "g20": true,
    "carried": true
   },
@@ -407,25 +407,7 @@
    "asOf": "2026-10-22",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.013,
-   "g20": true,
-   "carried": true
-  },
-  {
-   "id": "market:VIX:2026-10-16",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +21.4% to 20.0",
-   "value": 19.99,
-   "previous": 16.46,
-   "change": 21.45,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-16",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 0.001,
+   "materiality": 0.008,
    "g20": true,
    "carried": true
   }
