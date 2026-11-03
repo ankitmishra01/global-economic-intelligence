@@ -1,23 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-02T23:55:24.822Z",
+ "generatedAt": "2026-11-03T12:51:51.578Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "USD_BROAD": {
-   "key": "USD_BROAD",
-   "label": "Broad dollar",
-   "unit": "index",
-   "value": 121.666,
-   "date": "2026-10-30",
-   "previous": 121.736,
-   "previousDate": "2026-10-29",
-   "change": -0.07,
-   "changePct": -0.06,
-   "source": "Federal Reserve via FRED (DTWEXBGS)",
-   "frequency": "daily",
-   "releaseCadence": "weekly",
-   "freshness": "current"
-  },
   "US10Y": {
    "key": "US10Y",
    "label": "US 10Y",
@@ -77,6 +62,21 @@
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
+  },
+  "USD_BROAD": {
+   "key": "USD_BROAD",
+   "label": "Broad dollar",
+   "unit": "index",
+   "value": 121.666,
+   "date": "2026-10-30",
+   "previous": 121.736,
+   "previousDate": "2026-10-29",
+   "change": -0.07,
+   "changePct": -0.06,
+   "source": "Federal Reserve via FRED (DTWEXBGS)",
+   "frequency": "daily",
+   "releaseCadence": "weekly",
+   "freshness": "current"
   }
  },
  "fx": {
@@ -382,7 +382,7 @@
      "change": 0.25
     },
     "area": "CO",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "CZE": {
@@ -486,7 +486,7 @@
      "change": 0.25
     },
     "area": "HK",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "HUN": {
@@ -499,7 +499,7 @@
      "change": -0.25
     },
     "area": "HU",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "IDN": {
@@ -629,7 +629,7 @@
      "change": 0.25
     },
     "area": "MK",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "MEX": {
@@ -681,7 +681,7 @@
      "change": 0.25
     },
     "area": "NO",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "NZL": {
@@ -694,7 +694,7 @@
      "change": 0.25
     },
     "area": "NZ",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "PER": {
@@ -811,7 +811,7 @@
      "change": -0.25
     },
     "area": "TH",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "TUR": {
@@ -824,7 +824,7 @@
      "change": -1
     },
     "area": "TR",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "USA": {
