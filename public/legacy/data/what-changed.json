@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-03T12:51:53.975Z",
- "asOf": "2026-11-02",
+ "generatedAt": "2026-11-03T22:21:33.819Z",
+ "asOf": "2026-11-03",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-02T23:55:24.822Z"
+  "realtime": "2026-11-03T12:51:51.578Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -35,16 +35,16 @@
    "kind": "fx",
    "iso3": "BRA",
    "currency": "BRL",
-   "title": "BRL weakened 9.1% against the US dollar over 30 days",
-   "value": 5.4378,
-   "change": 9.09,
+   "title": "BRL weakened 10.2% against the US dollar over 30 days",
+   "value": 5.4934,
+   "change": 10.2,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-11-02",
+   "asOf": "2026-11-03",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 5.454,
+   "materiality": 6.12,
    "g20": true
   },
   {
@@ -95,8 +95,9 @@
    "asOf": "2026-10-30",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 3.228,
-   "g20": true
+   "materiality": 1.937,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "policy:COL:12.25",
@@ -129,7 +130,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.467,
+   "materiality": 0.28,
    "g20": true,
    "carried": true
   },
@@ -147,7 +148,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.467,
+   "materiality": 0.28,
    "g20": true,
    "carried": true
   },
@@ -165,7 +166,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.467,
+   "materiality": 0.28,
    "g20": true,
    "carried": true
   },
@@ -183,7 +184,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.467,
+   "materiality": 0.28,
    "g20": true,
    "carried": true
   },
@@ -201,7 +202,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.467,
+   "materiality": 0.28,
    "g20": true,
    "carried": true
   },
@@ -219,7 +220,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.467,
+   "materiality": 0.28,
    "g20": true,
    "carried": true
   },
@@ -237,7 +238,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.311,
+   "materiality": 0.187,
    "g20": false,
    "carried": true
   },
@@ -255,7 +256,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.202,
+   "materiality": 0.121,
    "g20": false,
    "carried": true
   },
@@ -273,7 +274,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.202,
+   "materiality": 0.121,
    "g20": false,
    "carried": true
   },
@@ -291,7 +292,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.202,
+   "materiality": 0.121,
    "g20": false,
    "carried": true
   },
@@ -309,7 +310,7 @@
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.025,
+   "materiality": 0.015,
    "g20": false,
    "carried": true
   },
@@ -327,7 +328,7 @@
    "asOf": "2026-10-27",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.014,
+   "materiality": 0.008,
    "g20": true,
    "carried": true
   },
@@ -345,7 +346,7 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
    "carried": true
   },
