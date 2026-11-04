@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-04T03:02:23.446Z",
+ "generatedAt": "2026-11-04T13:04:05.502Z",
  "asOf": "2026-11-03",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-03T22:21:31.479Z"
+  "realtime": "2026-11-04T03:02:21.008Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -112,7 +112,7 @@
    "asOf": "2026-10-30",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 1.162,
+   "materiality": 0.697,
    "g20": true,
    "carried": true
   },
@@ -130,7 +130,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.168,
+   "materiality": 0.101,
    "g20": true,
    "carried": true
   },
@@ -148,7 +148,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.168,
+   "materiality": 0.101,
    "g20": true,
    "carried": true
   },
@@ -166,7 +166,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.168,
+   "materiality": 0.101,
    "g20": true,
    "carried": true
   },
@@ -184,7 +184,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.168,
+   "materiality": 0.101,
    "g20": true,
    "carried": true
   },
@@ -202,7 +202,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.168,
+   "materiality": 0.101,
    "g20": true,
    "carried": true
   },
@@ -220,7 +220,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.168,
+   "materiality": 0.101,
    "g20": true,
    "carried": true
   },
@@ -238,7 +238,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.112,
+   "materiality": 0.067,
    "g20": false,
    "carried": true
   },
@@ -256,7 +256,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.073,
+   "materiality": 0.044,
    "g20": false,
    "carried": true
   },
@@ -274,7 +274,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.073,
+   "materiality": 0.044,
    "g20": false,
    "carried": true
   },
@@ -292,7 +292,7 @@
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.009,
+   "materiality": 0.005,
    "g20": false,
    "carried": true
   },
@@ -310,7 +310,7 @@
    "asOf": "2026-10-27",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
    "carried": true
   },
@@ -328,7 +328,7 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.002,
+   "materiality": 0.001,
    "g20": true,
    "carried": true
   },
