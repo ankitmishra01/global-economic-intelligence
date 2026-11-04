@@ -1,14 +1,14 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-03T22:21:33.819Z",
+ "generatedAt": "2026-11-04T03:02:23.446Z",
  "asOf": "2026-11-03",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-03T12:51:51.578Z"
+  "realtime": "2026-11-03T22:21:31.479Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
-  "policy": 13,
+  "policy": 12,
   "fx": 5,
   "market": 4
  },
@@ -82,24 +82,6 @@
    "g20": true
   },
   {
-   "id": "market:VIX:2026-10-30",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +12.9% to 19.4",
-   "value": 19.42,
-   "previous": 17.2,
-   "change": 12.91,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-30",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 1.937,
-   "g20": true,
-   "carried": true
-  },
-  {
    "id": "policy:COL:12.25",
    "kind": "policy",
    "iso3": "COL",
@@ -117,6 +99,24 @@
    "g20": false
   },
   {
+   "id": "market:VIX:2026-10-30",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +12.9% to 19.4",
+   "value": 19.42,
+   "previous": 17.2,
+   "change": 12.91,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-10-30",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 1.162,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "policy:JPN:1.25",
    "kind": "policy",
    "iso3": "JPN",
@@ -130,7 +130,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.28,
+   "materiality": 0.168,
    "g20": true,
    "carried": true
   },
@@ -148,7 +148,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.28,
+   "materiality": 0.168,
    "g20": true,
    "carried": true
   },
@@ -166,7 +166,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.28,
+   "materiality": 0.168,
    "g20": true,
    "carried": true
   },
@@ -184,7 +184,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.28,
+   "materiality": 0.168,
    "g20": true,
    "carried": true
   },
@@ -202,7 +202,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.28,
+   "materiality": 0.168,
    "g20": true,
    "carried": true
   },
@@ -220,7 +220,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.28,
+   "materiality": 0.168,
    "g20": true,
    "carried": true
   },
@@ -238,7 +238,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.187,
+   "materiality": 0.112,
    "g20": false,
    "carried": true
   },
@@ -256,7 +256,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.121,
+   "materiality": 0.073,
    "g20": false,
    "carried": true
   },
@@ -274,25 +274,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.121,
-   "g20": false,
-   "carried": true
-  },
-  {
-   "id": "policy:HKG:4.25",
-   "kind": "policy",
-   "iso3": "HKG",
-   "title": "Hong Kong SAR, China's central bank raised its policy rate by 25bp to 4.25%",
-   "value": 4.25,
-   "previous": 4,
-   "change": 0.25,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-21",
-   "source": "BIS central bank policy rates (WS_CBPOL)",
-   "since": "2026-08",
-   "newSinceLastRefresh": false,
-   "materiality": 0.121,
+   "materiality": 0.073,
    "g20": false,
    "carried": true
   },
@@ -310,7 +292,7 @@
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.015,
+   "materiality": 0.009,
    "g20": false,
    "carried": true
   },
@@ -328,7 +310,7 @@
    "asOf": "2026-10-27",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.008,
+   "materiality": 0.005,
    "g20": true,
    "carried": true
   },
@@ -346,7 +328,7 @@
    "asOf": "2026-10-26",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.003,
+   "materiality": 0.002,
    "g20": true,
    "carried": true
   },

@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-03T22:21:31.479Z",
+ "generatedAt": "2026-11-04T03:02:21.008Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
   "BRENT": {
@@ -14,21 +14,6 @@
    "change": -5.02,
    "changePct": -3.92,
    "source": "EIA via FRED (DCOILBRENTEU)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "stale"
-  },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
-   "unit": "USD/bbl",
-   "value": 103.37,
-   "date": "2026-10-27",
-   "previous": 105.25,
-   "previousDate": "2026-10-26",
-   "change": -1.88,
-   "changePct": -1.79,
-   "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
@@ -48,21 +33,6 @@
    "releaseCadence": "weekly",
    "freshness": "current"
   },
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 4.91,
-   "date": "2026-11-02",
-   "previous": 4.94,
-   "previousDate": "2026-10-30",
-   "change": -0.03,
-   "changePct": -0.61,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "VIX": {
    "key": "VIX",
    "label": "VIX",
@@ -74,6 +44,36 @@
    "change": 1.73,
    "changePct": 8.91,
    "source": "Cboe via FRED (VIXCLS)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
+  },
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 103.37,
+   "date": "2026-10-27",
+   "previous": 105.25,
+   "previousDate": "2026-10-26",
+   "change": -1.88,
+   "changePct": -1.79,
+   "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "stale"
+  },
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 4.91,
+   "date": "2026-11-02",
+   "previous": 4.94,
+   "previousDate": "2026-10-30",
+   "change": -0.03,
+   "changePct": -0.61,
+   "source": "U.S. Treasury via FRED (DGS10)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
