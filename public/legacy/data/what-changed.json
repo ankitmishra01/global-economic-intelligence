@@ -1,16 +1,16 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-05T13:17:57.129Z",
- "asOf": "2026-11-04",
+ "generatedAt": "2026-11-05T22:42:01.098Z",
+ "asOf": "2026-11-05",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-05T03:32:48.468Z"
+  "realtime": "2026-11-05T13:17:55.132Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "policy": 12,
   "fx": 5,
-  "market": 2
+  "market": 3
  },
  "items": [
   {
@@ -35,16 +35,33 @@
    "kind": "fx",
    "iso3": "BRA",
    "currency": "BRL",
-   "title": "BRL weakened 9.6% against the US dollar over 30 days",
-   "value": 5.4654,
-   "change": 9.64,
+   "title": "BRL weakened 10.0% against the US dollar over 30 days",
+   "value": 5.4664,
+   "change": 10.02,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-11-04",
+   "asOf": "2026-11-05",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 5.784,
+   "materiality": 6.012,
+   "g20": true
+  },
+  {
+   "id": "market:VIX:2026-11-04",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX fell -20.3% to 16.6",
+   "value": 16.61,
+   "previous": 20.83,
+   "change": -20.26,
+   "unit": "%",
+   "direction": "down",
+   "asOf": "2026-11-04",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": true,
+   "materiality": 5.065,
    "g20": true
   },
   {
@@ -59,9 +76,9 @@
    "direction": "up",
    "asOf": "2026-11-02",
    "source": "BIS central bank policy rates (WS_CBPOL)",
-   "since": null,
-   "newSinceLastRefresh": true,
-   "materiality": 5.4,
+   "since": "2026-09",
+   "newSinceLastRefresh": false,
+   "materiality": 3.6,
    "g20": true
   },
   {
@@ -112,7 +129,7 @@
    "asOf": "2026-10-27",
    "source": "EIA via FRED (DCOILBRENTEU)",
    "newSinceLastRefresh": false,
-   "materiality": 0.706,
+   "materiality": 0.424,
    "g20": true,
    "carried": true
   },
@@ -130,7 +147,7 @@
    "asOf": "2026-10-30",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.151,
+   "materiality": 0.091,
    "g20": true,
    "carried": true
   },
@@ -148,7 +165,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.022,
+   "materiality": 0.013,
    "g20": true,
    "carried": true
   },
@@ -166,7 +183,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.022,
+   "materiality": 0.013,
    "g20": true,
    "carried": true
   },
@@ -184,7 +201,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.022,
+   "materiality": 0.013,
    "g20": true,
    "carried": true
   },
@@ -202,7 +219,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.022,
+   "materiality": 0.013,
    "g20": true,
    "carried": true
   },
@@ -220,7 +237,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.022,
+   "materiality": 0.013,
    "g20": true,
    "carried": true
   },
@@ -238,7 +255,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.014,
+   "materiality": 0.008,
    "g20": false,
    "carried": true
   },
@@ -256,7 +273,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.01,
+   "materiality": 0.006,
    "g20": false,
    "carried": true
   },
@@ -274,7 +291,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.01,
+   "materiality": 0.006,
    "g20": false,
    "carried": true
   },
