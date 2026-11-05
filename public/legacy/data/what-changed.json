@@ -1,14 +1,14 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-05T03:32:50.461Z",
+ "generatedAt": "2026-11-05T13:17:57.129Z",
  "asOf": "2026-11-04",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-04T22:40:15.944Z"
+  "realtime": "2026-11-05T03:32:48.468Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
-  "policy": 11,
+  "policy": 12,
   "fx": 5,
   "market": 2
  },
@@ -23,7 +23,7 @@
    "change": -1,
    "unit": "%",
    "direction": "down",
-   "asOf": "2026-10-23",
+   "asOf": "2026-11-03",
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-09",
    "newSinceLastRefresh": false,
@@ -45,6 +45,23 @@
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
    "materiality": 5.784,
+   "g20": true
+  },
+  {
+   "id": "policy:CAN:2.5",
+   "kind": "policy",
+   "iso3": "CAN",
+   "title": "The Bank of Canada raised its policy rate by 25bp to 2.5%",
+   "value": 2.5,
+   "previous": 2.25,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-02",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": null,
+   "newSinceLastRefresh": true,
+   "materiality": 5.4,
    "g20": true
   },
   {
@@ -74,7 +91,7 @@
    "change": 0.25,
    "unit": "%",
    "direction": "up",
-   "asOf": "2026-10-23",
+   "asOf": "2026-11-03",
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-09",
    "newSinceLastRefresh": false,
@@ -95,7 +112,7 @@
    "asOf": "2026-10-27",
    "source": "EIA via FRED (DCOILBRENTEU)",
    "newSinceLastRefresh": false,
-   "materiality": 1.176,
+   "materiality": 0.706,
    "g20": true,
    "carried": true
   },
@@ -113,7 +130,7 @@
    "asOf": "2026-10-30",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.251,
+   "materiality": 0.151,
    "g20": true,
    "carried": true
   },
@@ -131,7 +148,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.037,
+   "materiality": 0.022,
    "g20": true,
    "carried": true
   },
@@ -149,7 +166,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.037,
+   "materiality": 0.022,
    "g20": true,
    "carried": true
   },
@@ -167,7 +184,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.037,
+   "materiality": 0.022,
    "g20": true,
    "carried": true
   },
@@ -185,7 +202,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.037,
+   "materiality": 0.022,
    "g20": true,
    "carried": true
   },
@@ -203,7 +220,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.037,
+   "materiality": 0.022,
    "g20": true,
    "carried": true
   },
@@ -221,7 +238,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.024,
+   "materiality": 0.014,
    "g20": false,
    "carried": true
   },
@@ -239,7 +256,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.016,
+   "materiality": 0.01,
    "g20": false,
    "carried": true
   },
@@ -257,7 +274,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.016,
+   "materiality": 0.01,
    "g20": false,
    "carried": true
   },
@@ -275,7 +292,7 @@
    "asOf": "2026-10-28",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.002,
+   "materiality": 0.001,
    "g20": false,
    "carried": true
   },
