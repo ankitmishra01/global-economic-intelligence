@@ -1,18 +1,35 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-06T13:01:29.746Z",
- "asOf": "2026-11-05",
+ "generatedAt": "2026-11-06T22:10:02.493Z",
+ "asOf": "2026-11-06",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-06T03:28:51.204Z"
+  "realtime": "2026-11-06T13:01:28.229Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
+  "market": 4,
   "policy": 10,
-  "fx": 4,
-  "market": 3
+  "fx": 4
  },
  "items": [
+  {
+   "id": "market:VIX:2026-11-05",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +69.7% to 28.2",
+   "value": 28.18,
+   "previous": 16.61,
+   "change": 69.66,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-05",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": true,
+   "materiality": 17.415,
+   "g20": true
+  },
   {
    "id": "policy:TUR:36",
    "kind": "policy",
@@ -35,33 +52,16 @@
    "kind": "fx",
    "iso3": "BRA",
    "currency": "BRL",
-   "title": "BRL weakened 10.0% against the US dollar over 30 days",
-   "value": 5.4664,
-   "change": 10.02,
+   "title": "BRL weakened 9.9% against the US dollar over 30 days",
+   "value": 5.5037,
+   "change": 9.94,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-11-05",
+   "asOf": "2026-11-06",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 6.012,
-   "g20": true
-  },
-  {
-   "id": "market:VIX:2026-11-04",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX fell -20.3% to 16.6",
-   "value": 16.61,
-   "previous": 20.83,
-   "change": -20.26,
-   "unit": "%",
-   "direction": "down",
-   "asOf": "2026-11-04",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 5.065,
+   "materiality": 5.964,
    "g20": true
   },
   {
@@ -99,6 +99,24 @@
    "g20": true
   },
   {
+   "id": "market:VIX:2026-11-04",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX fell -20.3% to 16.6",
+   "value": 16.61,
+   "previous": 20.83,
+   "change": -20.26,
+   "unit": "%",
+   "direction": "down",
+   "asOf": "2026-11-04",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 3.039,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "policy:COL:12.25",
    "kind": "policy",
    "iso3": "COL",
@@ -129,7 +147,7 @@
    "asOf": "2026-10-27",
    "source": "EIA via FRED (DCOILBRENTEU)",
    "newSinceLastRefresh": false,
-   "materiality": 0.152,
+   "materiality": 0.091,
    "g20": true,
    "carried": true
   },
@@ -147,7 +165,7 @@
    "asOf": "2026-10-30",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.033,
+   "materiality": 0.02,
    "g20": true,
    "carried": true
   },
@@ -165,7 +183,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
    "carried": true
   },
@@ -183,7 +201,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
    "carried": true
   },
@@ -201,7 +219,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
    "carried": true
   },
@@ -219,7 +237,7 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
    "carried": true
   },
@@ -237,26 +255,8 @@
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-08",
    "newSinceLastRefresh": false,
-   "materiality": 0.005,
+   "materiality": 0.003,
    "g20": true,
-   "carried": true
-  },
-  {
-   "id": "policy:DNK:2.1",
-   "kind": "policy",
-   "iso3": "DNK",
-   "title": "Denmark's central bank raised its policy rate by 25bp to 2.1%",
-   "value": 2.1,
-   "previous": 1.85,
-   "change": 0.25,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-10-26",
-   "source": "BIS central bank policy rates (WS_CBPOL)",
-   "since": "2026-08",
-   "newSinceLastRefresh": false,
-   "materiality": 0.002,
-   "g20": false,
    "carried": true
   },
   {
@@ -293,6 +293,24 @@
    "newSinceLastRefresh": false,
    "materiality": 0.001,
    "g20": true,
+   "carried": true
+  },
+  {
+   "id": "policy:DNK:2.1",
+   "kind": "policy",
+   "iso3": "DNK",
+   "title": "Denmark's central bank raised its policy rate by 25bp to 2.1%",
+   "value": 2.1,
+   "previous": 1.85,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-10-26",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": "2026-08",
+   "newSinceLastRefresh": false,
+   "materiality": 0.001,
+   "g20": false,
    "carried": true
   },
   {
