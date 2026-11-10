@@ -1,8 +1,53 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-07T02:54:23.705Z",
+ "generatedAt": "2026-11-09T14:00:06.536Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 99.64,
+   "date": "2026-11-03",
+   "previous": 100.06,
+   "previousDate": "2026-11-02",
+   "change": -0.42,
+   "changePct": -0.42,
+   "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "stale"
+  },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 28.18,
+   "date": "2026-11-05",
+   "previous": 16.61,
+   "previousDate": "2026-11-04",
+   "change": 11.57,
+   "changePct": 69.66,
+   "source": "Cboe via FRED (VIXCLS)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "stale"
+  },
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 4.84,
+   "date": "2026-11-05",
+   "previous": 4.9,
+   "previousDate": "2026-11-04",
+   "change": -0.06,
+   "changePct": -1.22,
+   "source": "U.S. Treasury via FRED (DGS10)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "stale"
+  },
   "USD_BROAD": {
    "key": "USD_BROAD",
    "label": "Broad dollar",
@@ -32,51 +77,6 @@
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
-  },
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 4.84,
-   "date": "2026-11-05",
-   "previous": 4.9,
-   "previousDate": "2026-11-04",
-   "change": -0.06,
-   "changePct": -1.22,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 28.18,
-   "date": "2026-11-05",
-   "previous": 16.61,
-   "previousDate": "2026-11-04",
-   "change": 11.57,
-   "changePct": 69.66,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
-   "unit": "USD/bbl",
-   "value": 99.64,
-   "date": "2026-11-03",
-   "previous": 100.06,
-   "previousDate": "2026-11-02",
-   "change": -0.42,
-   "changePct": -0.42,
-   "source": "EIA via FRED (DCOILWTICO)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "stale"
   }
  },
  "fx": {
@@ -86,7 +86,7 @@
   "monthAgoDate": "2026-10-07",
   "source": "European Central Bank euro foreign exchange reference rates",
   "frequency": "daily",
-  "freshness": "current",
+  "freshness": "stale",
   "values": {
    "JPY": {
     "perUsd": 158.33,
@@ -304,7 +304,7 @@
      "change": 0.25
     },
     "area": "AU",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "AUT": {
@@ -486,7 +486,7 @@
      "change": 0.25
     },
     "area": "HK",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "HUN": {
@@ -499,7 +499,7 @@
      "change": -0.25
     },
     "area": "HU",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "IDN": {
@@ -785,7 +785,7 @@
      "change": 0.25
     },
     "area": "SA",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "SWE": {
@@ -811,7 +811,7 @@
      "change": -0.25
     },
     "area": "TH",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "TUR": {
