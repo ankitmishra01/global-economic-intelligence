@@ -1,16 +1,16 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-10T00:43:42.883Z",
+ "generatedAt": "2026-11-10T13:34:59.959Z",
  "asOf": "2026-11-09",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-09T14:00:06.536Z"
+  "realtime": "2026-11-10T00:43:40.608Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "policy": 4,
-  "market": 3,
-  "fx": 2
+  "fx": 2,
+  "market": 3
  },
  "items": [
   {
@@ -31,24 +31,6 @@
    "g20": true
   },
   {
-   "id": "market:VIX:2026-11-05",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +69.7% to 28.2",
-   "value": 28.18,
-   "previous": 16.61,
-   "change": 69.66,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-11-05",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 10.449,
-   "g20": true,
-   "carried": true
-  },
-  {
    "id": "fx:BRL:30d:weaker",
    "kind": "fx",
    "iso3": "BRA",
@@ -64,6 +46,24 @@
    "newSinceLastRefresh": false,
    "materiality": 6.3,
    "g20": true
+  },
+  {
+   "id": "market:VIX:2026-11-05",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +69.7% to 28.2",
+   "value": 28.18,
+   "previous": 16.61,
+   "change": 69.66,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-05",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 6.269,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "policy:CAN:2.5",
@@ -130,7 +130,7 @@
    "asOf": "2026-11-04",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.656,
+   "materiality": 0.394,
    "g20": true,
    "carried": true
   },
@@ -148,7 +148,7 @@
    "asOf": "2026-10-30",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.004,
+   "materiality": 0.002,
    "g20": true,
    "carried": true
   },
