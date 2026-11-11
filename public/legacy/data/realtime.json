@@ -1,8 +1,23 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-11T02:50:58.603Z",
+ "generatedAt": "2026-11-11T12:47:40.433Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 99.64,
+   "date": "2026-11-03",
+   "previous": 100.06,
+   "previousDate": "2026-11-02",
+   "change": -0.42,
+   "changePct": -0.42,
+   "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "stale"
+  },
   "US10Y": {
    "key": "US10Y",
    "label": "US 10Y",
@@ -17,21 +32,6 @@
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
-  },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
-   "unit": "USD/bbl",
-   "value": 107.03,
-   "date": "2026-11-03",
-   "previous": 107.39,
-   "previousDate": "2026-11-02",
-   "change": -0.36,
-   "changePct": -0.34,
-   "source": "EIA via FRED (DCOILBRENTEU)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "stale"
   },
   "VIX": {
    "key": "VIX",
@@ -48,17 +48,17 @@
    "releaseCadence": "daily",
    "freshness": "current"
   },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
    "unit": "USD/bbl",
-   "value": 99.64,
+   "value": 107.03,
    "date": "2026-11-03",
-   "previous": 100.06,
+   "previous": 107.39,
    "previousDate": "2026-11-02",
-   "change": -0.42,
-   "changePct": -0.42,
-   "source": "EIA via FRED (DCOILWTICO)",
+   "change": -0.36,
+   "changePct": -0.34,
+   "source": "EIA via FRED (DCOILBRENTEU)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
@@ -304,7 +304,7 @@
      "change": 0.25
     },
     "area": "AU",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "AUT": {
@@ -785,7 +785,7 @@
      "change": 0.25
     },
     "area": "SA",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "SWE": {
@@ -811,7 +811,7 @@
      "change": -0.25
     },
     "area": "TH",
-    "freshness": "delayed",
+    "freshness": "stale",
     "euroArea": false
    },
    "TUR": {

@@ -1,23 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-10T22:24:44.879Z",
+ "generatedAt": "2026-11-11T02:50:58.603Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 19.92,
-   "date": "2026-11-09",
-   "previous": 25.64,
-   "previousDate": "2026-11-06",
-   "change": -5.72,
-   "changePct": -22.31,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "US10Y": {
    "key": "US10Y",
    "label": "US 10Y",
@@ -47,6 +32,21 @@
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "stale"
+  },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 19.92,
+   "date": "2026-11-09",
+   "previous": 25.64,
+   "previousDate": "2026-11-06",
+   "change": -5.72,
+   "changePct": -22.31,
+   "source": "Cboe via FRED (VIXCLS)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
   },
   "WTI": {
    "key": "WTI",
@@ -525,7 +525,7 @@
      "change": -0.25
     },
     "area": "IL",
-    "freshness": "current",
+    "freshness": "delayed",
     "euroArea": false
    },
    "IND": {
