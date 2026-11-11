@@ -1,15 +1,15 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-10T22:24:47.313Z",
+ "generatedAt": "2026-11-11T02:51:01.097Z",
  "asOf": "2026-11-10",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-10T13:34:57.107Z"
+  "realtime": "2026-11-10T22:24:44.879Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "policy": 4,
-  "fx": 2,
+  "fx": 1,
   "market": 4
  },
  "items": [
@@ -60,27 +60,9 @@
    "direction": "down",
    "asOf": "2026-11-09",
    "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 5.578,
    "g20": true
-  },
-  {
-   "id": "market:VIX:2026-11-05",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +69.7% to 28.2",
-   "value": 28.18,
-   "previous": 16.61,
-   "change": 69.66,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-11-05",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 3.761,
-   "g20": true,
-   "carried": true
   },
   {
    "id": "policy:CAN:2.5",
@@ -117,6 +99,24 @@
    "g20": true
   },
   {
+   "id": "market:VIX:2026-11-05",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +69.7% to 28.2",
+   "value": 28.18,
+   "previous": 16.61,
+   "change": 69.66,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-05",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 2.257,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "policy:COL:12.25",
    "kind": "policy",
    "iso3": "COL",
@@ -147,7 +147,7 @@
    "asOf": "2026-11-04",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.236,
+   "materiality": 0.142,
    "g20": true,
    "carried": true
   },
@@ -167,24 +167,6 @@
    "newSinceLastRefresh": false,
    "materiality": 0.001,
    "g20": true,
-   "carried": true
-  },
-  {
-   "id": "fx:ILS:2026-10-28:1d",
-   "kind": "fx",
-   "iso3": "ISR",
-   "currency": "ILS",
-   "title": "ILS weakened 2.5% against the US dollar over 1 day",
-   "value": 3.1259,
-   "change": 2.5,
-   "unit": "% vs USD",
-   "window": "1d",
-   "direction": "weaker",
-   "asOf": "2026-10-28",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 0.001,
-   "g20": false,
    "carried": true
   }
  ]
