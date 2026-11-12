@@ -1,14 +1,14 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-11T23:30:08.869Z",
+ "generatedAt": "2026-11-12T13:50:37.955Z",
  "asOf": "2026-11-11",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-11T12:47:40.433Z"
+  "realtime": "2026-11-11T23:30:02.171Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
-  "policy": 4,
+  "policy": 8,
   "fx": 1,
   "market": 4
  },
@@ -23,7 +23,7 @@
    "change": -1,
    "unit": "%",
    "direction": "down",
-   "asOf": "2026-11-03",
+   "asOf": "2026-11-06",
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-09",
    "newSinceLastRefresh": false,
@@ -48,6 +48,57 @@
    "g20": true
   },
   {
+   "id": "policy:MEX:6.25",
+   "kind": "policy",
+   "iso3": "MEX",
+   "title": "Banco de México cut its policy rate by 25bp to 6.25%",
+   "value": 6.25,
+   "previous": 6.5,
+   "change": -0.25,
+   "unit": "%",
+   "direction": "down",
+   "asOf": "2026-11-10",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": null,
+   "newSinceLastRefresh": true,
+   "materiality": 5.4,
+   "g20": true
+  },
+  {
+   "id": "policy:GBR:4",
+   "kind": "policy",
+   "iso3": "GBR",
+   "title": "The Bank of England raised its policy rate by 25bp to 4%",
+   "value": 4,
+   "previous": 3.75,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-09",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": null,
+   "newSinceLastRefresh": true,
+   "materiality": 5.4,
+   "g20": true
+  },
+  {
+   "id": "policy:AUS:4.85",
+   "kind": "policy",
+   "iso3": "AUS",
+   "title": "The Reserve Bank of Australia raised its policy rate by 25bp to 4.85%",
+   "value": 4.85,
+   "previous": 4.6,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-05",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": null,
+   "newSinceLastRefresh": true,
+   "materiality": 5.4,
+   "g20": true
+  },
+  {
    "id": "policy:CAN:2.5",
    "kind": "policy",
    "iso3": "CAN",
@@ -57,7 +108,7 @@
    "change": 0.25,
    "unit": "%",
    "direction": "up",
-   "asOf": "2026-11-02",
+   "asOf": "2026-11-09",
    "source": "BIS central bank policy rates (WS_CBPOL)",
    "since": "2026-09",
    "newSinceLastRefresh": false,
@@ -82,6 +133,23 @@
    "g20": true
   },
   {
+   "id": "policy:CZE:4",
+   "kind": "policy",
+   "iso3": "CZE",
+   "title": "Czechia's central bank raised its policy rate by 25bp to 4%",
+   "value": 4,
+   "previous": 3.75,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-09",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": null,
+   "newSinceLastRefresh": true,
+   "materiality": 2.34,
+   "g20": false
+  },
+  {
    "id": "market:VIX:2026-11-09",
    "kind": "market",
    "iso3": null,
@@ -95,7 +163,7 @@
    "asOf": "2026-11-09",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 3.347,
+   "materiality": 2.008,
    "g20": true,
    "carried": true
   },
@@ -130,7 +198,7 @@
    "asOf": "2026-11-05",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.812,
+   "materiality": 0.487,
    "g20": true,
    "carried": true
   },
@@ -148,7 +216,7 @@
    "asOf": "2026-11-04",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.051,
+   "materiality": 0.031,
    "g20": true,
    "carried": true
   },
