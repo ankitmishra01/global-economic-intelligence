@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-16T13:46:19.451Z",
- "asOf": "2026-11-13",
+ "generatedAt": "2026-11-17T00:51:29.844Z",
+ "asOf": "2026-11-16",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-14T03:22:59.586Z"
+  "realtime": "2026-11-16T13:46:16.769Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -35,16 +35,16 @@
    "kind": "fx",
    "iso3": "BRA",
    "currency": "BRL",
-   "title": "BRL weakened 12.7% against the US dollar over 30 days",
-   "value": 5.6637,
-   "change": 12.73,
+   "title": "BRL weakened 13.1% against the US dollar over 30 days",
+   "value": 5.7053,
+   "change": 13.08,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-11-13",
+   "asOf": "2026-11-16",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 7.638,
+   "materiality": 7.848,
    "g20": true
   },
   {
@@ -146,8 +146,9 @@
    "asOf": "2026-11-12",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 3,
-   "g20": true
+   "materiality": 1.8,
+   "g20": true,
+   "carried": true
   },
   {
    "id": "policy:CZE:4",
@@ -197,7 +198,7 @@
    "asOf": "2026-11-11",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.547,
+   "materiality": 0.328,
    "g20": true,
    "carried": true
   },
@@ -215,7 +216,7 @@
    "asOf": "2026-11-10",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.54,
+   "materiality": 0.324,
    "g20": true,
    "carried": true
   },
@@ -233,7 +234,7 @@
    "asOf": "2026-11-09",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.094,
+   "materiality": 0.056,
    "g20": true,
    "carried": true
   },
@@ -251,7 +252,7 @@
    "asOf": "2026-11-05",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.023,
+   "materiality": 0.014,
    "g20": true,
    "carried": true
   },
