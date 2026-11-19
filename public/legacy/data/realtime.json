@@ -1,38 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-18T23:25:23.224Z",
+ "generatedAt": "2026-11-19T14:29:55.305Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "VIX": {
-   "key": "VIX",
-   "label": "VIX",
-   "unit": "index",
-   "value": 25.46,
-   "date": "2026-11-17",
-   "previous": 22.91,
-   "previousDate": "2026-11-16",
-   "change": 2.55,
-   "changePct": 11.13,
-   "source": "Cboe via FRED (VIXCLS)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "USD_BROAD": {
-   "key": "USD_BROAD",
-   "label": "Broad dollar",
-   "unit": "index",
-   "value": 122.65,
-   "date": "2026-11-13",
-   "previous": 122.543,
-   "previousDate": "2026-11-12",
-   "change": 0.107,
-   "changePct": 0.09,
-   "source": "Federal Reserve via FRED (DTWEXBGS)",
-   "frequency": "daily",
-   "releaseCadence": "weekly",
-   "freshness": "current"
-  },
   "BRENT": {
    "key": "BRENT",
    "label": "Brent",
@@ -63,6 +33,21 @@
    "releaseCadence": "daily",
    "freshness": "current"
   },
+  "VIX": {
+   "key": "VIX",
+   "label": "VIX",
+   "unit": "index",
+   "value": 25.46,
+   "date": "2026-11-17",
+   "previous": 22.91,
+   "previousDate": "2026-11-16",
+   "change": 2.55,
+   "changePct": 11.13,
+   "source": "Cboe via FRED (VIXCLS)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
+  },
   "WTI": {
    "key": "WTI",
    "label": "WTI",
@@ -76,6 +61,21 @@
    "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
    "releaseCadence": "daily",
+   "freshness": "current"
+  },
+  "USD_BROAD": {
+   "key": "USD_BROAD",
+   "label": "Broad dollar",
+   "unit": "index",
+   "value": 122.65,
+   "date": "2026-11-13",
+   "previous": 122.543,
+   "previousDate": "2026-11-12",
+   "change": 0.107,
+   "changePct": 0.09,
+   "source": "Federal Reserve via FRED (DTWEXBGS)",
+   "frequency": "daily",
+   "releaseCadence": "weekly",
    "freshness": "current"
   }
  },
@@ -292,11 +292,11 @@
   "source": "BIS central bank policy rates (WS_CBPOL)",
   "frequency": "daily",
   "releaseCadence": "weekly",
-  "date": "2026-11-10",
+  "date": "2026-11-17",
   "values": {
    "AUS": {
     "rate": 4.85,
-    "date": "2026-11-05",
+    "date": "2026-11-12",
     "lastChange": {
      "from": 4.6,
      "to": 4.85,
@@ -304,12 +304,12 @@
      "change": 0.25
     },
     "area": "AU",
-    "freshness": "stale",
+    "freshness": "current",
     "euroArea": false
    },
    "AUT": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -322,7 +322,7 @@
    },
    "CAN": {
     "rate": 2.5,
-    "date": "2026-11-09",
+    "date": "2026-11-16",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -335,7 +335,7 @@
    },
    "CHE": {
     "rate": 0,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 0.25,
      "to": 0,
@@ -348,7 +348,7 @@
    },
    "CHL": {
     "rate": 4.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 4.75,
      "to": 4.5,
@@ -361,7 +361,7 @@
    },
    "CHN": {
     "rate": 3,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 3.1,
      "to": 3,
@@ -374,7 +374,7 @@
    },
    "COL": {
     "rate": 12.25,
-    "date": "2026-11-03",
+    "date": "2026-11-12",
     "lastChange": {
      "from": 12,
      "to": 12.25,
@@ -382,12 +382,12 @@
      "change": 0.25
     },
     "area": "CO",
-    "freshness": "stale",
+    "freshness": "current",
     "euroArea": false
    },
    "CZE": {
     "rate": 4,
-    "date": "2026-11-09",
+    "date": "2026-11-12",
     "lastChange": {
      "from": 3.75,
      "to": 4,
@@ -400,7 +400,7 @@
    },
    "DEU": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -413,7 +413,7 @@
    },
    "DNK": {
     "rate": 2.1,
-    "date": "2026-11-10",
+    "date": "2026-11-16",
     "lastChange": {
      "from": 1.85,
      "to": 2.1,
@@ -426,7 +426,7 @@
    },
    "ESP": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -439,7 +439,7 @@
    },
    "FRA": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -452,7 +452,7 @@
    },
    "GBR": {
     "rate": 4,
-    "date": "2026-11-09",
+    "date": "2026-11-16",
     "lastChange": {
      "from": 3.75,
      "to": 4,
@@ -465,7 +465,7 @@
    },
    "GRC": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -478,7 +478,7 @@
    },
    "HKG": {
     "rate": 4.25,
-    "date": "2026-11-04",
+    "date": "2026-11-11",
     "lastChange": {
      "from": 4,
      "to": 4.25,
@@ -486,12 +486,12 @@
      "change": 0.25
     },
     "area": "HK",
-    "freshness": "stale",
+    "freshness": "current",
     "euroArea": false
    },
    "HUN": {
     "rate": 5.5,
-    "date": "2026-11-04",
+    "date": "2026-11-11",
     "lastChange": {
      "from": 5.75,
      "to": 5.5,
@@ -499,7 +499,20 @@
      "change": -0.25
     },
     "area": "HU",
-    "freshness": "stale",
+    "freshness": "current",
+    "euroArea": false
+   },
+   "IDN": {
+    "rate": 5.75,
+    "date": "2026-11-16",
+    "lastChange": {
+     "from": 5.25,
+     "to": 5.75,
+     "after": "2026-05",
+     "change": 0.5
+    },
+    "area": "ID",
+    "freshness": "current",
     "euroArea": false
    },
    "ISR": {
@@ -530,7 +543,7 @@
    },
    "ISL": {
     "rate": 8,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 7.75,
      "to": 8,
@@ -543,7 +556,7 @@
    },
    "ITA": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -556,7 +569,7 @@
    },
    "JPN": {
     "rate": 1.25,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 1,
      "to": 1.25,
@@ -582,7 +595,7 @@
    },
    "KWT": {
     "rate": 3.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 3.75,
      "to": 3.5,
@@ -608,7 +621,7 @@
    },
    "MKD": {
     "rate": 4.25,
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "lastChange": {
      "from": 4,
      "to": 4.25,
@@ -621,7 +634,7 @@
    },
    "MEX": {
     "rate": 6.25,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 6.5,
      "to": 6.25,
@@ -634,7 +647,7 @@
    },
    "MYS": {
     "rate": 2.75,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 3,
      "to": 2.75,
@@ -647,7 +660,7 @@
    },
    "NLD": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -660,7 +673,7 @@
    },
    "NOR": {
     "rate": 4.5,
-    "date": "2026-11-05",
+    "date": "2026-11-16",
     "lastChange": {
      "from": 4.25,
      "to": 4.5,
@@ -668,12 +681,12 @@
      "change": 0.25
     },
     "area": "NO",
-    "freshness": "stale",
+    "freshness": "current",
     "euroArea": false
    },
    "NZL": {
     "rate": 2.75,
-    "date": "2026-11-06",
+    "date": "2026-11-13",
     "lastChange": {
      "from": 2.5,
      "to": 2.75,
@@ -681,17 +694,17 @@
      "change": 0.25
     },
     "area": "NZ",
-    "freshness": "delayed",
+    "freshness": "current",
     "euroArea": false
    },
    "PER": {
-    "rate": 4.25,
-    "date": "2026-11-09",
+    "rate": 4.5,
+    "date": "2026-11-17",
     "lastChange": {
-     "from": 4.5,
-     "to": 4.25,
-     "after": "2025-08",
-     "change": -0.25
+     "from": 4.25,
+     "to": 4.5,
+     "after": "2026-10",
+     "change": 0.25
     },
     "area": "PE",
     "freshness": "current",
@@ -699,7 +712,7 @@
    },
    "POL": {
     "rate": 3.75,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 4,
      "to": 3.75,
@@ -712,7 +725,7 @@
    },
    "PRT": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -725,7 +738,7 @@
    },
    "ROU": {
     "rate": 6.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 6.75,
      "to": 6.5,
@@ -737,21 +750,21 @@
     "euroArea": false
    },
    "SRB": {
-    "rate": 5.75,
-    "date": "2026-10-30",
+    "rate": 6,
+    "date": "2026-11-12",
     "lastChange": {
-     "from": 6,
-     "to": 5.75,
-     "after": "2024-08",
-     "change": -0.25
+     "from": 5.75,
+     "to": 6,
+     "after": "2026-10",
+     "change": 0.25
     },
     "area": "RS",
-    "freshness": "stale",
+    "freshness": "current",
     "euroArea": false
    },
    "RUS": {
     "rate": 14,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 14.25,
      "to": 14,
@@ -776,13 +789,13 @@
     "euroArea": false
    },
    "SWE": {
-    "rate": 1.75,
-    "date": "2026-11-10",
+    "rate": 2,
+    "date": "2026-11-17",
     "lastChange": {
-     "from": 2,
-     "to": 1.75,
-     "after": "2025-09",
-     "change": -0.25
+     "from": 1.75,
+     "to": 2,
+     "after": "2026-10",
+     "change": 0.25
     },
     "area": "SE",
     "freshness": "current",
@@ -790,7 +803,7 @@
    },
    "THA": {
     "rate": 1,
-    "date": "2026-11-05",
+    "date": "2026-11-12",
     "lastChange": {
      "from": 1.25,
      "to": 1,
@@ -798,12 +811,12 @@
      "change": -0.25
     },
     "area": "TH",
-    "freshness": "stale",
+    "freshness": "current",
     "euroArea": false
    },
    "TUR": {
     "rate": 36,
-    "date": "2026-11-06",
+    "date": "2026-11-13",
     "lastChange": {
      "from": 37,
      "to": 36,
@@ -811,12 +824,12 @@
      "change": -1
     },
     "area": "TR",
-    "freshness": "delayed",
+    "freshness": "current",
     "euroArea": false
    },
    "USA": {
     "rate": 3.875,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 3.625,
      "to": 3.875,
@@ -829,7 +842,7 @@
    },
    "BEL": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -842,7 +855,7 @@
    },
    "BGR": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -855,7 +868,7 @@
    },
    "HRV": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -868,7 +881,7 @@
    },
    "CYP": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -881,7 +894,7 @@
    },
    "EST": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -894,7 +907,7 @@
    },
    "FIN": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -907,7 +920,7 @@
    },
    "IRL": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -920,7 +933,7 @@
    },
    "LVA": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -933,7 +946,7 @@
    },
    "LTU": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -946,7 +959,7 @@
    },
    "LUX": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -959,7 +972,7 @@
    },
    "MLT": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -972,7 +985,7 @@
    },
    "SVK": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -985,7 +998,7 @@
    },
    "SVN": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -998,7 +1011,7 @@
    },
    "EUU": {
     "rate": 2.5,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 2.25,
      "to": 2.5,
@@ -1011,7 +1024,7 @@
    },
    "ZAF": {
     "rate": 7.25,
-    "date": "2026-11-10",
+    "date": "2026-11-16",
     "lastChange": {
      "from": 7,
      "to": 7.25,
@@ -1037,7 +1050,7 @@
    },
    "BRA": {
     "rate": 13.75,
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "lastChange": {
      "from": 14,
      "to": 13.75,
