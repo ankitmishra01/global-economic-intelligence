@@ -1,23 +1,8 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-19T23:37:04.959Z",
+ "generatedAt": "2026-11-20T14:08:04.991Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 5.07,
-   "date": "2026-11-18",
-   "previous": 5.1,
-   "previousDate": "2026-11-17",
-   "change": -0.03,
-   "changePct": -0.59,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "VIX": {
    "key": "VIX",
    "label": "VIX",
@@ -29,6 +14,21 @@
    "change": -0.9,
    "changePct": -3.53,
    "source": "Cboe via FRED (VIXCLS)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "current"
+  },
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 5.07,
+   "date": "2026-11-18",
+   "previous": 5.1,
+   "previousDate": "2026-11-17",
+   "change": -0.03,
+   "changePct": -0.59,
+   "source": "U.S. Treasury via FRED (DGS10)",
    "frequency": "daily",
    "releaseCadence": "daily",
    "freshness": "current"
@@ -61,7 +61,7 @@
    "source": "EIA via FRED (DCOILBRENTEU)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "current"
+   "freshness": "stale"
   },
   "WTI": {
    "key": "WTI",
@@ -76,7 +76,7 @@
    "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "current"
+   "freshness": "stale"
   }
  },
  "fx": {
