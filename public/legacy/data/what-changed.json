@@ -1,16 +1,16 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-20T14:08:10.174Z",
- "asOf": "2026-11-19",
+ "generatedAt": "2026-11-20T23:09:47.228Z",
+ "asOf": "2026-11-20",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-19T23:37:04.959Z"
+  "realtime": "2026-11-20T14:08:04.991Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "policy": 11,
-  "fx": 2,
-  "market": 6
+  "fx": 4,
+  "market": 7
  },
  "items": [
   {
@@ -35,16 +35,50 @@
    "kind": "fx",
    "iso3": "BRA",
    "currency": "BRL",
-   "title": "BRL weakened 17.3% against the US dollar over 30 days",
-   "value": 5.892,
-   "change": 17.29,
+   "title": "BRL weakened 18.2% against the US dollar over 30 days",
+   "value": 5.938,
+   "change": 18.21,
    "unit": "% vs USD",
    "window": "30d",
    "direction": "weaker",
-   "asOf": "2026-11-19",
+   "asOf": "2026-11-20",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 10.374,
+   "materiality": 10.926,
+   "g20": true
+  },
+  {
+   "id": "fx:ZAR:30d:weaker",
+   "kind": "fx",
+   "iso3": "ZAF",
+   "currency": "ZAR",
+   "title": "ZAR weakened 6.7% against the US dollar over 30 days",
+   "value": 17.4692,
+   "change": 6.7,
+   "unit": "% vs USD",
+   "window": "30d",
+   "direction": "weaker",
+   "asOf": "2026-11-20",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": true,
+   "materiality": 4.02,
+   "g20": true
+  },
+  {
+   "id": "market:VIX:2026-11-19",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +15.8% to 28.4",
+   "value": 28.44,
+   "previous": 24.56,
+   "change": 15.8,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-19",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": true,
+   "materiality": 3.95,
    "g20": true
   },
   {
@@ -133,6 +167,40 @@
    "g20": true
   },
   {
+   "id": "fx:AUD:30d:weaker",
+   "kind": "fx",
+   "iso3": "AUS",
+   "currency": "AUD",
+   "title": "AUD weakened 5.5% against the US dollar over 30 days",
+   "value": 1.5002,
+   "change": 5.52,
+   "unit": "% vs USD",
+   "window": "30d",
+   "direction": "weaker",
+   "asOf": "2026-11-20",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": true,
+   "materiality": 3.312,
+   "g20": true
+  },
+  {
+   "id": "fx:ILS:30d:weaker",
+   "kind": "fx",
+   "iso3": "ISR",
+   "currency": "ILS",
+   "title": "ILS weakened 8.1% against the US dollar over 30 days",
+   "value": 3.3428,
+   "change": 8.14,
+   "unit": "% vs USD",
+   "window": "30d",
+   "direction": "weaker",
+   "asOf": "2026-11-20",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 3.256,
+   "g20": false
+  },
+  {
    "id": "policy:SWE:2",
    "kind": "policy",
    "iso3": "SWE",
@@ -147,23 +215,6 @@
    "since": "2026-10",
    "newSinceLastRefresh": false,
    "materiality": 2.4,
-   "g20": false
-  },
-  {
-   "id": "fx:ILS:30d:weaker",
-   "kind": "fx",
-   "iso3": "ISR",
-   "currency": "ILS",
-   "title": "ILS weakened 5.8% against the US dollar over 30 days",
-   "value": 3.2887,
-   "change": 5.82,
-   "unit": "% vs USD",
-   "window": "30d",
-   "direction": "weaker",
-   "asOf": "2026-11-19",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 2.328,
    "g20": false
   },
   {
@@ -248,7 +299,7 @@
    "asOf": "2026-11-17",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 1.001,
+   "materiality": 0.601,
    "g20": true,
    "carried": true
   },
@@ -266,7 +317,7 @@
    "asOf": "2026-11-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.606,
+   "materiality": 0.364,
    "g20": true,
    "carried": true
   },
@@ -284,7 +335,7 @@
    "asOf": "2026-11-12",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.05,
+   "materiality": 0.03,
    "g20": true,
    "carried": true
   },
@@ -302,7 +353,7 @@
    "asOf": "2026-11-11",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.01,
+   "materiality": 0.006,
    "g20": true,
    "carried": true
   },
@@ -320,7 +371,7 @@
    "asOf": "2026-11-10",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.009,
+   "materiality": 0.005,
    "g20": true,
    "carried": true
   },
