@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-23T16:08:16.947Z",
+ "generatedAt": "2026-11-24T03:21:58.770Z",
  "asOf": "2026-11-23",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-21T04:01:33.553Z"
+  "realtime": "2026-11-23T16:08:13.121Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -43,7 +43,7 @@
    "direction": "up",
    "asOf": "2026-11-20",
    "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 6.55,
    "g20": true
   },
@@ -201,6 +201,23 @@
    "g20": true
   },
   {
+   "id": "market:US10Y:2026-11-20",
+   "kind": "market",
+   "iso3": null,
+   "market": "US10Y",
+   "title": "US 10Y fell -12bp to 4.92%",
+   "value": 4.92,
+   "previous": 5.04,
+   "change": -0.12,
+   "unit": "pp",
+   "direction": "down",
+   "asOf": "2026-11-20",
+   "source": "U.S. Treasury via FRED (DGS10)",
+   "newSinceLastRefresh": true,
+   "materiality": 3,
+   "g20": true
+  },
+  {
    "id": "policy:SWE:2",
    "kind": "policy",
    "iso3": "SWE",
@@ -216,24 +233,6 @@
    "newSinceLastRefresh": false,
    "materiality": 2.4,
    "g20": false
-  },
-  {
-   "id": "market:VIX:2026-11-19",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX rose +15.8% to 28.4",
-   "value": 28.44,
-   "previous": 24.56,
-   "change": 15.8,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-11-19",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 2.37,
-   "g20": true,
-   "carried": true
   },
   {
    "id": "policy:PER:4.5",
@@ -304,6 +303,24 @@
    "g20": false
   },
   {
+   "id": "market:VIX:2026-11-19",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX rose +15.8% to 28.4",
+   "value": 28.44,
+   "previous": 24.56,
+   "change": 15.8,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-19",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 1.422,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "market:VIX:2026-11-17",
    "kind": "market",
    "iso3": null,
@@ -317,7 +334,7 @@
    "asOf": "2026-11-17",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.217,
+   "materiality": 0.13,
    "g20": true,
    "carried": true
   },
@@ -335,7 +352,7 @@
    "asOf": "2026-11-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.131,
+   "materiality": 0.079,
    "g20": true,
    "carried": true
   },
@@ -353,7 +370,7 @@
    "asOf": "2026-11-12",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.011,
+   "materiality": 0.007,
    "g20": true,
    "carried": true
   },
@@ -371,25 +388,7 @@
    "asOf": "2026-11-11",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.002,
-   "g20": true,
-   "carried": true
-  },
-  {
-   "id": "market:US10Y:2026-11-10",
-   "kind": "market",
-   "iso3": null,
-   "market": "US10Y",
-   "title": "US 10Y rose +10bp to 4.98%",
-   "value": 4.98,
-   "previous": 4.88,
-   "change": 0.1,
-   "unit": "pp",
-   "direction": "up",
-   "asOf": "2026-11-10",
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "newSinceLastRefresh": false,
-   "materiality": 0.002,
+   "materiality": 0.001,
    "g20": true,
    "carried": true
   }
