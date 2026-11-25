@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-24T15:58:10.350Z",
+ "generatedAt": "2026-11-25T01:27:58.605Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
   "US10Y": {
@@ -8,15 +8,15 @@
    "label": "US 10Y",
    "unit": "%",
    "value": 4.92,
-   "date": "2026-11-20",
-   "previous": 5.04,
-   "previousDate": "2026-11-19",
-   "change": -0.12,
-   "changePct": -2.38,
+   "date": "2026-11-23",
+   "previous": 4.92,
+   "previousDate": "2026-11-20",
+   "change": 0,
+   "changePct": 0,
    "source": "U.S. Treasury via FRED (DGS10)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "stale"
+   "freshness": "current"
   },
   "BRENT": {
    "key": "BRENT",
@@ -33,20 +33,20 @@
    "releaseCadence": "daily",
    "freshness": "stale"
   },
-  "USD_BROAD": {
-   "key": "USD_BROAD",
-   "label": "Broad dollar",
-   "unit": "index",
-   "value": 123.598,
-   "date": "2026-11-20",
-   "previous": 123.525,
-   "previousDate": "2026-11-19",
-   "change": 0.073,
-   "changePct": 0.06,
-   "source": "Federal Reserve via FRED (DTWEXBGS)",
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 89.53,
+   "date": "2026-11-17",
+   "previous": 89.24,
+   "previousDate": "2026-11-16",
+   "change": 0.29,
+   "changePct": 0.32,
+   "source": "EIA via FRED (DCOILWTICO)",
    "frequency": "daily",
-   "releaseCadence": "weekly",
-   "freshness": "current"
+   "releaseCadence": "daily",
+   "freshness": "stale"
   },
   "VIX": {
    "key": "VIX",
@@ -63,20 +63,20 @@
    "releaseCadence": "daily",
    "freshness": "current"
   },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
-   "unit": "USD/bbl",
-   "value": 89.53,
-   "date": "2026-11-17",
-   "previous": 89.24,
-   "previousDate": "2026-11-16",
-   "change": 0.29,
-   "changePct": 0.32,
-   "source": "EIA via FRED (DCOILWTICO)",
+  "USD_BROAD": {
+   "key": "USD_BROAD",
+   "label": "Broad dollar",
+   "unit": "index",
+   "value": 123.598,
+   "date": "2026-11-20",
+   "previous": 123.525,
+   "previousDate": "2026-11-19",
+   "change": 0.073,
+   "changePct": 0.06,
+   "source": "Federal Reserve via FRED (DTWEXBGS)",
    "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "stale"
+   "releaseCadence": "weekly",
+   "freshness": "current"
   }
  },
  "fx": {
