@@ -1,16 +1,16 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-25T15:45:13.418Z",
+ "generatedAt": "2026-11-26T01:01:33.186Z",
  "asOf": "2026-11-25",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-25T01:27:58.605Z"
+  "realtime": "2026-11-25T15:45:11.089Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
   "policy": 11,
   "fx": 7,
-  "market": 7
+  "market": 6
  },
  "items": [
   {
@@ -63,24 +63,6 @@
    "newSinceLastRefresh": false,
    "materiality": 3.884,
    "g20": false
-  },
-  {
-   "id": "market:VIX:2026-11-23",
-   "kind": "market",
-   "iso3": null,
-   "market": "VIX",
-   "title": "VIX fell -25.8% to 26.6",
-   "value": 26.62,
-   "previous": 35.89,
-   "change": -25.83,
-   "unit": "%",
-   "direction": "down",
-   "asOf": "2026-11-23",
-   "source": "Cboe via FRED (VIXCLS)",
-   "newSinceLastRefresh": false,
-   "materiality": 3.875,
-   "g20": true,
-   "carried": true
   },
   {
    "id": "fx:ZAR:30d:weaker",
@@ -197,7 +179,7 @@
    "direction": "weaker",
    "asOf": "2026-11-25",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 3.498,
    "g20": true
   },
@@ -236,6 +218,24 @@
    "g20": false
   },
   {
+   "id": "market:VIX:2026-11-23",
+   "kind": "market",
+   "iso3": null,
+   "market": "VIX",
+   "title": "VIX fell -25.8% to 26.6",
+   "value": 26.62,
+   "previous": 35.89,
+   "change": -25.83,
+   "unit": "%",
+   "direction": "down",
+   "asOf": "2026-11-23",
+   "source": "Cboe via FRED (VIXCLS)",
+   "newSinceLastRefresh": false,
+   "materiality": 2.325,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "fx:NOK:30d:weaker",
    "kind": "fx",
    "iso3": "NOR",
@@ -248,27 +248,9 @@
    "direction": "weaker",
    "asOf": "2026-11-25",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 2.192,
    "g20": false
-  },
-  {
-   "id": "fx:BRL:2026-11-24:1d",
-   "kind": "fx",
-   "iso3": "BRA",
-   "currency": "BRL",
-   "title": "BRL strengthened 2.1% against the US dollar over 1 day",
-   "value": 5.8697,
-   "change": -2.14,
-   "unit": "% vs USD",
-   "window": "1d",
-   "direction": "stronger",
-   "asOf": "2026-11-24",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 1.926,
-   "g20": true,
-   "carried": true
   },
   {
    "id": "policy:PER:4.5",
@@ -339,6 +321,24 @@
    "g20": false
   },
   {
+   "id": "fx:BRL:2026-11-24:1d",
+   "kind": "fx",
+   "iso3": "BRA",
+   "currency": "BRL",
+   "title": "BRL strengthened 2.1% against the US dollar over 1 day",
+   "value": 5.8697,
+   "change": -2.14,
+   "unit": "% vs USD",
+   "window": "1d",
+   "direction": "stronger",
+   "asOf": "2026-11-24",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 1.156,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "market:VIX:2026-11-20",
    "kind": "market",
    "iso3": null,
@@ -352,7 +352,7 @@
    "asOf": "2026-11-20",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 1.415,
+   "materiality": 0.849,
    "g20": true,
    "carried": true
   },
@@ -370,7 +370,7 @@
    "asOf": "2026-11-20",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 1.08,
+   "materiality": 0.648,
    "g20": true,
    "carried": true
   },
@@ -388,7 +388,7 @@
    "asOf": "2026-11-19",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.307,
+   "materiality": 0.184,
    "g20": true,
    "carried": true
   },
@@ -406,7 +406,7 @@
    "asOf": "2026-11-17",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.028,
+   "materiality": 0.017,
    "g20": true,
    "carried": true
   },
@@ -424,25 +424,7 @@
    "asOf": "2026-11-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.017,
-   "g20": true,
-   "carried": true
-  },
-  {
-   "id": "market:US10Y:2026-11-12",
-   "kind": "market",
-   "iso3": null,
-   "market": "US10Y",
-   "title": "US 10Y rose +12bp to 5.10%",
-   "value": 5.1,
-   "previous": 4.98,
-   "change": 0.12,
-   "unit": "pp",
-   "direction": "up",
-   "asOf": "2026-11-12",
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "newSinceLastRefresh": false,
-   "materiality": 0.001,
+   "materiality": 0.01,
    "g20": true,
    "carried": true
   }
