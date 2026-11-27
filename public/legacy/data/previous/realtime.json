@@ -1,8 +1,53 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-26T15:26:51.979Z",
+ "generatedAt": "2026-11-27T01:02:07.939Z",
  "note": "Official daily reference data, not tick-by-tick prices.",
  "markets": {
+  "US10Y": {
+   "key": "US10Y",
+   "label": "US 10Y",
+   "unit": "%",
+   "value": 4.91,
+   "date": "2026-11-24",
+   "previous": 4.92,
+   "previousDate": "2026-11-23",
+   "change": -0.01,
+   "changePct": -0.2,
+   "source": "U.S. Treasury via FRED (DGS10)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "delayed"
+  },
+  "BRENT": {
+   "key": "BRENT",
+   "label": "Brent",
+   "unit": "USD/bbl",
+   "value": 91.8,
+   "date": "2026-11-24",
+   "previous": 91.2,
+   "previousDate": "2026-11-23",
+   "change": 0.6,
+   "changePct": 0.66,
+   "source": "EIA via FRED (DCOILBRENTEU)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "delayed"
+  },
+  "WTI": {
+   "key": "WTI",
+   "label": "WTI",
+   "unit": "USD/bbl",
+   "value": 82.24,
+   "date": "2026-11-24",
+   "previous": 81.42,
+   "previousDate": "2026-11-23",
+   "change": 0.82,
+   "changePct": 1.01,
+   "source": "EIA via FRED (DCOILWTICO)",
+   "frequency": "daily",
+   "releaseCadence": "daily",
+   "freshness": "delayed"
+  },
   "USD_BROAD": {
    "key": "USD_BROAD",
    "label": "Broad dollar",
@@ -18,21 +63,6 @@
    "releaseCadence": "weekly",
    "freshness": "current"
   },
-  "WTI": {
-   "key": "WTI",
-   "label": "WTI",
-   "unit": "USD/bbl",
-   "value": 82.24,
-   "date": "2026-11-24",
-   "previous": 81.42,
-   "previousDate": "2026-11-23",
-   "change": 0.82,
-   "changePct": 1.01,
-   "source": "EIA via FRED (DCOILWTICO)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
   "VIX": {
    "key": "VIX",
    "label": "VIX",
@@ -46,37 +76,7 @@
    "source": "Cboe via FRED (VIXCLS)",
    "frequency": "daily",
    "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "US10Y": {
-   "key": "US10Y",
-   "label": "US 10Y",
-   "unit": "%",
-   "value": 4.91,
-   "date": "2026-11-24",
-   "previous": 4.92,
-   "previousDate": "2026-11-23",
-   "change": -0.01,
-   "changePct": -0.2,
-   "source": "U.S. Treasury via FRED (DGS10)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
-  },
-  "BRENT": {
-   "key": "BRENT",
-   "label": "Brent",
-   "unit": "USD/bbl",
-   "value": 91.8,
-   "date": "2026-11-24",
-   "previous": 91.2,
-   "previousDate": "2026-11-23",
-   "change": 0.6,
-   "changePct": 0.66,
-   "source": "EIA via FRED (DCOILBRENTEU)",
-   "frequency": "daily",
-   "releaseCadence": "daily",
-   "freshness": "current"
+   "freshness": "delayed"
   }
  },
  "fx": {
