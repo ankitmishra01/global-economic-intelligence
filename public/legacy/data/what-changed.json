@@ -1,10 +1,10 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-26T15:26:53.841Z",
+ "generatedAt": "2026-11-27T01:02:10.559Z",
  "asOf": "2026-11-26",
  "comparedWith": {
   "latest": "2026-10-17T03:28:55.330Z",
-  "realtime": "2026-11-26T01:01:30.636Z"
+  "realtime": "2026-11-26T15:26:51.979Z"
  },
  "note": "Deterministic diff of the published data; daily official reference series, not tick prices.",
  "counts": {
@@ -31,23 +31,6 @@
    "g20": true
   },
   {
-   "id": "policy:IDN:6",
-   "kind": "policy",
-   "iso3": "IDN",
-   "title": "Bank Indonesia raised its policy rate by 25bp to 6%",
-   "value": 6,
-   "previous": 5.75,
-   "change": 0.25,
-   "unit": "%",
-   "direction": "up",
-   "asOf": "2026-11-19",
-   "source": "BIS central bank policy rates (WS_CBPOL)",
-   "since": null,
-   "newSinceLastRefresh": true,
-   "materiality": 5.4,
-   "g20": true
-  },
-  {
    "id": "fx:BRL:2026-11-26:1d",
    "kind": "fx",
    "iso3": "BRA",
@@ -60,7 +43,7 @@
    "direction": "stronger",
    "asOf": "2026-11-26",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 4.686,
    "g20": true
   },
@@ -150,6 +133,23 @@
    "g20": true
   },
   {
+   "id": "policy:IDN:6",
+   "kind": "policy",
+   "iso3": "IDN",
+   "title": "Bank Indonesia raised its policy rate by 25bp to 6%",
+   "value": 6,
+   "previous": 5.75,
+   "change": 0.25,
+   "unit": "%",
+   "direction": "up",
+   "asOf": "2026-11-19",
+   "source": "BIS central bank policy rates (WS_CBPOL)",
+   "since": "2026-10",
+   "newSinceLastRefresh": false,
+   "materiality": 3.6,
+   "g20": true
+  },
+  {
    "id": "policy:IND:5.5",
    "kind": "policy",
    "iso3": "IND",
@@ -196,7 +196,7 @@
    "direction": "weaker",
    "asOf": "2026-11-26",
    "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": true,
+   "newSinceLastRefresh": false,
    "materiality": 3.33,
    "g20": true
   },
@@ -233,42 +233,6 @@
    "newSinceLastRefresh": false,
    "materiality": 2.4,
    "g20": false
-  },
-  {
-   "id": "fx:MXN:2026-11-25:1d",
-   "kind": "fx",
-   "iso3": "MEX",
-   "currency": "MXN",
-   "title": "MXN weakened 2.2% against the US dollar over 1 day",
-   "value": 19.7002,
-   "change": 2.24,
-   "unit": "% vs USD",
-   "window": "1d",
-   "direction": "weaker",
-   "asOf": "2026-11-25",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 2.099,
-   "g20": true,
-   "carried": true
-  },
-  {
-   "id": "fx:BRL:30d:weaker",
-   "kind": "fx",
-   "iso3": "BRA",
-   "currency": "BRL",
-   "title": "BRL weakened 5.6% against the US dollar over 30 days",
-   "value": 5.9013,
-   "change": 5.6,
-   "unit": "% vs USD",
-   "window": "30d",
-   "direction": "weaker",
-   "asOf": "2026-11-25",
-   "source": "European Central Bank euro foreign exchange reference rates",
-   "newSinceLastRefresh": false,
-   "materiality": 2.016,
-   "g20": true,
-   "carried": true
   },
   {
    "id": "policy:CZE:4",
@@ -339,6 +303,42 @@
    "g20": false
   },
   {
+   "id": "fx:MXN:2026-11-25:1d",
+   "kind": "fx",
+   "iso3": "MEX",
+   "currency": "MXN",
+   "title": "MXN weakened 2.2% against the US dollar over 1 day",
+   "value": 19.7002,
+   "change": 2.24,
+   "unit": "% vs USD",
+   "window": "1d",
+   "direction": "weaker",
+   "asOf": "2026-11-25",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 1.259,
+   "g20": true,
+   "carried": true
+  },
+  {
+   "id": "fx:BRL:30d:weaker",
+   "kind": "fx",
+   "iso3": "BRA",
+   "currency": "BRL",
+   "title": "BRL weakened 5.6% against the US dollar over 30 days",
+   "value": 5.9013,
+   "change": 5.6,
+   "unit": "% vs USD",
+   "window": "30d",
+   "direction": "weaker",
+   "asOf": "2026-11-25",
+   "source": "European Central Bank euro foreign exchange reference rates",
+   "newSinceLastRefresh": false,
+   "materiality": 1.21,
+   "g20": true,
+   "carried": true
+  },
+  {
    "id": "market:VIX:2026-11-23",
    "kind": "market",
    "iso3": null,
@@ -352,7 +352,7 @@
    "asOf": "2026-11-23",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 1.395,
+   "materiality": 0.837,
    "g20": true,
    "carried": true
   },
@@ -370,7 +370,7 @@
    "asOf": "2026-11-25",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 1.315,
+   "materiality": 0.789,
    "g20": false,
    "carried": true
   },
@@ -388,7 +388,7 @@
    "asOf": "2026-11-24",
    "source": "European Central Bank euro foreign exchange reference rates",
    "newSinceLastRefresh": false,
-   "materiality": 0.694,
+   "materiality": 0.416,
    "g20": true,
    "carried": true
   },
@@ -406,7 +406,7 @@
    "asOf": "2026-11-20",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.509,
+   "materiality": 0.305,
    "g20": true,
    "carried": true
   },
@@ -424,7 +424,7 @@
    "asOf": "2026-11-20",
    "source": "U.S. Treasury via FRED (DGS10)",
    "newSinceLastRefresh": false,
-   "materiality": 0.389,
+   "materiality": 0.233,
    "g20": true,
    "carried": true
   },
@@ -442,7 +442,7 @@
    "asOf": "2026-11-19",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.11,
+   "materiality": 0.066,
    "g20": true,
    "carried": true
   },
@@ -460,7 +460,7 @@
    "asOf": "2026-11-17",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.01,
+   "materiality": 0.006,
    "g20": true,
    "carried": true
   },
@@ -478,7 +478,7 @@
    "asOf": "2026-11-16",
    "source": "Cboe via FRED (VIXCLS)",
    "newSinceLastRefresh": false,
-   "materiality": 0.006,
+   "materiality": 0.004,
    "g20": true,
    "carried": true
   }
